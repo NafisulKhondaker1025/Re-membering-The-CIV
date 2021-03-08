@@ -20,10 +20,10 @@
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
     
-    <a-entity gltf-model="./assets/Porche/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: -110.944725; latitude: 32.236393;" animation-mixer/>
+    <a-entity gltf-model="./assets/Porche/scene.gltf" rotation="0 180 0" scale="0.2 0.2 0.2" gps-entity-place="longitude: -110.944825; latitude: 32.236493;" animation-mixer/>
     
         
-        <a-camera gps-camera rotation-reader> </a-camera>
+        <a-camera gps-camera='gpsMinDistance: 1' rotation-reader> </a-camera>
 	</a-scene>
 </body>
 </html>
