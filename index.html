@@ -12,18 +12,37 @@
     <script>
         THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
     </script>
+    <script crossorigin="anonymous" src="https://holostream-static.akamaized.net/release/2020.4.4.1/remote/HoloStream-2020.4.4.1.min.js"></script>
+
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
-        vr-mode-ui="enabled: false"
+     vr-mode-ui="enabled: false"
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+    <a-entity
+    light="type: directional;
+           intensity: 0.8;
+           castShadow: true;
+           shadowMapHeight:2048;
+           shadowMapWidth:2048;
+           shadowCameraTop: 10;
+           target: #holo;"
+    xrextras-attach="target: holo; offset: 0 15 0;"
+    shadow>
+  </a-entity>
+  <a-light type="ambient" intensity="1"></a-light>
     
-    <a-entity gltf-model="./assets/Porche/scene.gltf" rotation="0 180 0" scale="0.2 0.2 0.2" gps-entity-place="longitude: -110.944825; latitude: 32.236493;" animation-mixer/>
-    
+    <a-entity gltf-model="./assets/Porche/scene.gltf" rotation="0 180 0" scale="0.2 0.2 0.2" gps-entity-place="longitude: -110.944610; latitude: 32.236453;" animation-mixer/>
+	    
+    <holostream-entity
+    id="holo" 
+    src="https://holostream-dev.arcturus.studio/media/23f517e8-a10e-48ae-bc76-8ccde959937d/stream/dash/manifest.mpd"
+    gps-entity-place="longitude: -110.944610; latitude: 32.236453;"
+  </holostream-entity>
         
-        <a-camera gps-camera='gpsMinDistance: 1' rotation-reader> </a-camera>
-	</a-scene>
+  <a-camera gps-camera='gpsMinDistance: 1' rotation-reader> </a-camera>
+  </a-scene>
 </body>
 </html>
