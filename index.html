@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Hologram Demo</title>
+    <title>GeoAR</title>
     <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
@@ -35,14 +35,8 @@
   <a-light type="ambient" intensity="1"></a-light>
     
     <a-entity gltf-model="./assets/Porche/scene.gltf" rotation="0 180 0" scale="0.2 0.2 0.2" gps-entity-place="longitude: -110.944610; latitude: 32.236453;" animation-mixer/>
-	    
-    <holostream-entity
-    id="holo" 
-    src="https://holostream-dev.arcturus.studio/media/23f517e8-a10e-48ae-bc76-8ccde959937d/stream/dash/manifest.mpd"
-    gps-entity-place="longitude: -110.944610; latitude: 32.236453;"
-  </holostream-entity>
         
-  <a-camera gps-camera='gpsMinDistance: 1' rotation-reader> </a-camera>
+  <a-camera gps-camera rotation-reader> </a-camera>
   </a-scene>
 </body>
 </html>
