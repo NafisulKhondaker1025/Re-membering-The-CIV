@@ -1,16 +1,10 @@
 AFRAME.registerComponent('start-tracking', {
     init: function() {
-      const ground = document.getElementById('ground')
-      ground.addEventListener('click', event => {
+      //const ground = document.getElementById('ground')
         // Create new entity for the new object
         const model = document.createElement('a-entity')
 
-        // The raycaster gives a location of the touch in the scene
-        const touchPoint = event.detail.intersection.point
-        model.setAttribute('position', touchPoint)
-
-        const randomYRotation = Math.random() * 360
-        model.setAttribute('rotation', '0 ' + randomYRotation + ' 0')
+        model.setAttribute('position', '0 -1 0')
 
         model.setAttribute('visible', 'false')
         model.setAttribute('scale', '0.0001 0.0001 0.0001')
@@ -23,11 +17,10 @@ AFRAME.registerComponent('start-tracking', {
           model.setAttribute('visible', 'true')
           model.setAttribute('animation', {
             property: 'scale',
-            to: '0.01 0.01 0.01',
+            to: '1 1 1',
             easing: 'easeOutElastic',
             dur: 800,
           })
         })
-      })
     }
   })
