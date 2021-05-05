@@ -1,69 +1,69 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Test 3</title>
-    <!-- import aframe and then ar.js with image tracking / location based features -->
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <meta charset="utf-8">
+    <title>Ground Tracking</title>
 
-    <!-- style for the loader -->
-    <style>
-      .arjs-loader {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        z-index: 9999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    <!-- We've included a slightly modified version of A-Frame, which fixes some polish concerns -->
+    <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
+    <script src="//cdn.8thwall.com/web/aframe/aframe-animation-component-5.1.2.min.js"></script>
 
-      .arjs-loader div {
-        text-align: center;
-        font-size: 1.25em;
-        color: white;
-      }
-    </style>
+    <!-- XR Extras - provides utilities like load screen, almost there, and error handling.
+         See github.com/8thwall/web/tree/master/xrextras -->
+    <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
+
+    <!-- 8thWall Web - Replace the app key here with your own app key -->
+    <script async src="//apps.8thwall.com/xrweb?appKey=zrb7B4eI3Uj6WTZAfgyWjxi6c5P8Q977o69KFam1rLDl0iBfiFePNUjn3i36pMRvfLX0HA"></script>
+
   </head>
 
-  <body style="margin : 0px; overflow: hidden;">
-    <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
-    <div class="arjs-loader">
-      <div>Loading, please wait...</div>
-    </div>
-
-    <!-- a-frame scene -->
+  <body>
+    <!-- We must add the tap-place component to the scene so it has an effect -->
     <a-scene
-      vr-mode-ui="enabled: false;"
-      renderer="logarithmicDepthBuffer: true;"
-      embedded
-      arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-      <!-- a-nft is the anchor that defines an Image Tracking entity -->
-      <!-- on 'url' use the path to the Image Descriptors created before. -->
-      <!-- the path should end with the name without the extension e.g. if file is trex.fset' the path should end with trex -->
-      <a-nft
-        type="nft"
-        url="./assets/imagedes/testimage2"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance=".01"
-        smoothThreshold="5">
-          <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-          <a-entity
-          gltf-model="./assets/liveExportGLB.glb"
-              scale="5 5 5"
-              position="100 100 0"
-          >
-          </a-entity>
-      </a-nft>
-      <!-- static camera that moves according to the device movemenents -->
-      <a-entity camera></a-entity>
+      tap-place
+      xrextras-almost-there
+      xrextras-loading
+      xrextras-runtime-error
+      xrweb>
+
+      <!-- We can define assets here to be loaded when A-Frame initializes -->
+      <a-assets>
+        <!-- Credit to Poly by Google for the model: https://poly.google.com/view/6pwiq7hSrHr -->
+        <a-asset-item id="3dmodel" src="CIV2.glb"></a-asset-item>
+      </a-assets>
+
+      <!-- The raycaster will emit mouse events on scene objects specified with the cantap class -->
+      <a-camera
+        position="0 8 0"
+        raycaster="objects: .cantap"
+        cursor="
+          fuse: false;
+          rayOrigin: mouse;">
+      </a-camera>
+
+      <a-text
+        id='text'
+        value="Please move your phone from right to left to calibrate scene"
+        scale="5 5 5"
+      ></a-text>
+
+      <a-entity
+        light="type: directional;
+               intensity: 0.8;"
+        position="1 4.3 2.5">
+      </a-entity>
+
+      <a-light type="ambient" intensity="1"></a-light>
+
+      <!-- Adding the cantap class allows the ground to be clicked -->
+      <a-entity
+        id="ground"
+        class="cantap"
+        geometry="primitive: box"
+        material="color: #ffffff; transparent: true; opacity: 0.0"
+        scale="1000 2 1000"
+        position="0 -1 0">
+      </a-entity>
     </a-scene>
   </body>
 </html>
-
-
