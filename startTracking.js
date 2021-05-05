@@ -1,29 +1,33 @@
 AFRAME.registerComponent('start-tracking', {
     init: function() {
-     // const ground = document.getElementById('ground')
-     const text = document.getElementById('#text')
+      const ground = document.getElementById('ground')
+      ground.addEventListener('click', event => {
         // Create new entity for the new object
-        const CIV = document.createElement('a-entity')
+        const model = document.createElement('a-entity')
 
-        // setTimeout(() => {
-        //     text.setAttribute('visisble', 'false')
-        //   }, 5000)
-        CIV.setAttribute('position', '0 -1 0')
-        CIV.setAttribute('visible', 'false')
-        CIV.setAttribute('scale', '0.0001 0.0001 0.0001')
+        // The raycaster gives a location of the touch in the scene
+        const touchPoint = event.detail.intersection.point
+        model.setAttribute('position', touchPoint)
 
-        CIV.setAttribute('gltf-model', '#3dmodel')
-        this.el.sceneEl.appendChild(CIV)
+        const randomYRotation = Math.random() * 360
+        model.setAttribute('rotation', '0 ' + randomYRotation + ' 0')
 
-        CIV.addEventListener('model-loaded', () => {
+        model.setAttribute('visible', 'false')
+        model.setAttribute('scale', '0.0001 0.0001 0.0001')
+
+        model.setAttribute('gltf-model', '#3dmodel')
+        this.el.sceneEl.appendChild(model)
+
+        model.addEventListener('model-loaded', () => {
           // Once the model is loaded, we are ready to show it popping in using an animation
-          CIV.setAttribute('visible', 'true')
-          CIV.setAttribute('animation', {
+          model.setAttribute('visible', 'true')
+          model.setAttribute('animation', {
             property: 'scale',
             to: '0.01 0.01 0.01',
             easing: 'easeOutElastic',
             dur: 800,
           })
         })
+      })
     }
   })
