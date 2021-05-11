@@ -5,9 +5,8 @@ AFRAME.registerComponent('start-tracking', {
     const CIV = document.createElement('a-entity')
 
     setTimeout(() => {
-      console.log('it worked');
-      text.setAttribute('value', 'New Text');
-      CIV.setAttribute('position', '0 -1 0')
+      
+      CIV.setAttribute('position', '0 0 0')
       CIV.setAttribute('visible', 'false')
       CIV.setAttribute('scale', '0.0001 0.0001 0.0001')
 
