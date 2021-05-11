@@ -5,8 +5,8 @@ AFRAME.registerComponent('start-tracking', {
         // Create new entity for the new object
         const CIV = document.createElement('a-entity')
 
+        console.log('it worked');
         setTimeout(() => {
-            console.log('it worked');
             text.textContent = 'New text';
           }, 5000)
 
