@@ -21,6 +21,6 @@ AFRAME.registerComponent('start-tracking', {
           dur: 800,
         })
       })
-    }, 10000)
+    }, 15000)
   }
 })
