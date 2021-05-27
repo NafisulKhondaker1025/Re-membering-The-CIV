@@ -2,14 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ground Tracking 1</title>
+    <title>Ground Tracking</title>
 
-    <!-- We've included a slightly modified version of A-Frame, which fixes some polish concerns -->
     <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
     <script src="//cdn.8thwall.com/web/aframe/aframe-animation-component-5.1.2.min.js"></script>
 
-    <!-- XR Extras - provides utilities like load screen, almost there, and error handling.
-         See github.com/8thwall/web/tree/master/xrextras -->
     <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
 
     <!-- 8thWall Web - Replace the app key here with your own app key -->
@@ -20,7 +17,6 @@
   </head>
 
   <body>
-    <!-- We must add the tap-place component to the scene so it has an effect -->
     <a-scene
       start-tracking
       xrextras-almost-there
@@ -28,27 +24,24 @@
       xrextras-runtime-error
       xrweb>
 
-      <!-- We can define assets here to be loaded when A-Frame initializes -->
       <a-assets>
-        <!-- Credit to Poly by Google for the model: https://poly.google.com/view/6pwiq7hSrHr -->
         <a-asset-item id="3dmodel" src="assets/CIV2.glb"></a-asset-item>
       </a-assets>
 
       <!-- <span id='text'>Random Text</span> -->
 
-      <!-- The raycaster will emit mouse events on scene objects specified with the cantap class -->
       <a-camera
         position="0 8 0"
         cursor="
           fuse: false;
           rayOrigin: mouse;">
-      </a-camera>
-
-      <a-entity
+        <a-entity
         id='text'
         value="Please move your phone from right to left to calibrate scene"
         scale="5 5 5"
-      ></a-entity>
+        position="0 0 -1"
+        ></a-entity>
+      </a-camera>
 
       <a-entity
         light="type: directional;
@@ -58,7 +51,6 @@
 
       <a-light type="ambient" intensity="1"></a-light>
 
-      <!-- Adding the cantap class allows the ground to be clicked -->
       <a-entity
         id="ground"
         geometry="primitive: box"
