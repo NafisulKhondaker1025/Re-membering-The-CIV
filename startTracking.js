@@ -1,6 +1,6 @@
 AFRAME.registerComponent('start-tracking', {
     init: function() {
-    const text = document.getElementById('text')
+    const text = document.getElementById('loadingText')
     const CIV = document.createElement('a-entity')
 
     setTimeout(() => {
