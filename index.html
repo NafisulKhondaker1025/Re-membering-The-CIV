@@ -44,6 +44,9 @@
         scale="0.5 0.5 0.5"
         position="0 0 -1"
         ></a-entity>
+        <a-sphere id="logoSphere" position="0 100 -1" src="#logoImage" scale="1 1 1">
+          <a-animation attribute="rotation" dur="3600" fill="forward" easing="linear" to="0 360 0" repeat="indefinite"></a-animation>
+        </a-sphere>
       </a-camera>
 
       <a-entity
@@ -51,10 +54,6 @@
                intensity: 0.8;"
         position="1 4.3 2.5">
       </a-entity>
-
-      <a-sphere id="logoSphere" position="0 5 -1" src="#logoImage" scale="1 1 1">
-        <a-animation attribute="rotation" dur="3600" fill="forward" easing="linear" to="0 360 0" repeat="indefinite"></a-animation>
-      </a-sphere>
 
       <a-light type="ambient" intensity="1"></a-light>
 
