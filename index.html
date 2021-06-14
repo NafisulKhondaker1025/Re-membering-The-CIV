@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ground Tracking</title>
+    <title>Ground Tracking 1</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -28,6 +28,7 @@
 
       <a-assets>
         <a-asset-item id="3dmodel" src="assets/CIV2.glb"></a-asset-item>
+        <img id="logoImage" crossorigin="anonymous" src="assets/logo.png" />
       </a-assets>
 
       <!-- <span id='text'>Random Text</span> -->
@@ -39,10 +40,13 @@
           rayOrigin: mouse;">
         <a-entity
         id="loadingText"
-        text="value: Please move your phone from right to left to calibrate scene; align: center;"
-        scale="1 1 1"
-        position="0 0 -1"
+        text="value: Please move your phone from right to left to calibrate scene; align: center; "
+        scale="0.5 0.5 0.5"
+        position="1 1 1"
         ></a-entity>
+        <a-sphere id="logoSphere" position="1 2 1" src="#logoImage" scale=".35 .35 .35">
+            <a-animation attribute="rotation" dur="3600" fill="forward" easing="linear" to="0 360 0" repeat="indefinite"></a-animation>
+        </a-sphere>
       </a-camera>
 
       <a-entity
