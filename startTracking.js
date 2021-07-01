@@ -2,10 +2,12 @@ AFRAME.registerComponent('start-tracking', {
     init: function() {
     const text = document.getElementById('loadingText')
     const CIV = document.createElement('a-entity')
+    const gif = documnet.getElementById('stabilization')
 
     setTimeout(() => {
 
       CIV.setAttribute('position', '-5 -1 -5')
+      CIV.setAttribute('rotation', '0 180 0')
       CIV.setAttribute('visible', 'false')
       CIV.setAttribute('scale', '0.0001 0.0001 0.0001')
 
@@ -22,6 +24,7 @@ AFRAME.registerComponent('start-tracking', {
         })
       })
       text.setAttribute('visible', 'false')
-    }, 15000)
+      gif.setAttribute('visible', 'false')
+    }, 12000)
   }
 })
