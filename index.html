@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Ground Tracking 1</title>
+    <title>Remembering The CIV</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 
-    <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
+    <script src="//cdn.8thwall.com/web/aframe/8frame-1.1.0.min.js"></script>
     <script src="//cdn.8thwall.com/web/aframe/aframe-animation-component-5.1.2.min.js"></script>
 
     <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
@@ -24,14 +24,12 @@
       xrextras-almost-there
       xrextras-loading
       xrextras-runtime-error
+      renderer="colorManagement:true"
       xrweb>
 
       <a-assets>
-        <a-asset-item id="3dmodel" src="assets/CIV2.glb"></a-asset-item>
-        <img id="logoImage" crossorigin="anonymous" src="assets/logo.png" />
+        <a-asset-item id="3dmodel" src="assets/CIVf.glb"></a-asset-item>
       </a-assets>
-
-      <!-- <span id='text'>Random Text</span> -->
 
       <a-camera
         position="0 8 0"
@@ -46,20 +44,31 @@
       </a-camera>
 
       <a-entity
-        light="type: directional;
-               intensity: 0.8;"
-        position="1 4.3 2.5">
+        light="
+          type: directional;
+          intensity: 0.8;
+          castShadow: true;
+          shadowMapHeight:2048;
+          shadowMapWidth:2048;
+          shadowCameraTop: 20;
+          shadowCameraBottom: -20;
+          shadowCameraRight: 20;
+          shadowCameraLeft: -20;
+          target: #camera"
+        xrextras-attach="target: camera; offset: 8 15 4"
+        position="1 4.3 2.5"
+        shadow>
       </a-entity>
 
-      <a-light type="ambient" intensity="1"></a-light>
+      <a-light type="ambient" intensity="0.5"></a-light>
 
-      <a-entity
+      <a-box
         id="ground"
-        geometry="primitive: box"
-        material="color: #ffffff; transparent: true; opacity: 0.0"
         scale="1000 2 1000"
-        position="0 -1 0">
-      </a-entity>
+        position="0 -1 0"
+        material="shader: shadow; transparent: true; opacity: 0.4"
+        shadow>
+      </a-box>
     </a-scene>
   </body>
 </html>
