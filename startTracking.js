@@ -2,7 +2,7 @@ AFRAME.registerComponent('start-tracking', {
     init: function() {
     const text = document.getElementById('loadingText')
     const CIV = document.createElement('a-entity')
-    const gif = documnet.getElementById('stabilization')
+    const gif = document.getElementById('stabilization')
 
     setTimeout(() => {
 
