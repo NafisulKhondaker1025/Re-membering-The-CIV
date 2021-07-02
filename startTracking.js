@@ -2,7 +2,7 @@ AFRAME.registerComponent('start-tracking', {
     init: function() {
     const text = document.getElementById('loadingText')
     const CIV = document.createElement('a-entity')
-    const gif = document.getElementById('container')
+    //const gif = document.getElementById('container')
 
     setTimeout(() => {
 
@@ -24,7 +24,7 @@ AFRAME.registerComponent('start-tracking', {
         })
       })
       text.setAttribute('visible', 'false')
-      gif.setAttribute('visible', 'false')
+      //gif.setAttribute('visible', 'false')
     }, 12000)
   }
 })
