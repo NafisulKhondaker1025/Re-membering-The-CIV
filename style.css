@@ -1,5 +1,5 @@
 #container {
-    background-image: url(assets/ARjsQR.png);
+    background-image: url(stabilization.gif);
     background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
@@ -9,5 +9,4 @@
     top: 0;
     transform: translate(-50%, 0);
     z-index: 10;
-    display: none;
   }
