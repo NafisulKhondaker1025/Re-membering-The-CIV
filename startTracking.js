@@ -24,7 +24,7 @@ AFRAME.registerComponent('start-tracking', {
         })
       })
       text.setAttribute('visible', 'false')
-      container.setAttribute('display', 'none')
+      container.style.display = "none"
     }, 15000)
   }
 })
