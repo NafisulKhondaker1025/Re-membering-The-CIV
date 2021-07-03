@@ -7,7 +7,7 @@ AFRAME.registerComponent('start-tracking', {
  
     setTimeout(() => {
 
-      CIV.setAttribute('position', '0 -1 0')
+      CIV.setAttribute('position', '5 -1 5')
       CIV.setAttribute('rotation', '0 180 0')
       CIV.setAttribute('visible', 'false')
       CIV.setAttribute('scale', '0.0001 0.0001 0.0001')
@@ -19,7 +19,7 @@ AFRAME.registerComponent('start-tracking', {
         CIV.setAttribute('visible', 'true')
         CIV.setAttribute('animation', {
           property: 'scale',
-          to: '1 1 1',
+          to: '50 50 50',
           easing: 'easeOutElastic',
           dur: 800,
         })
