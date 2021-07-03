@@ -3,6 +3,7 @@ AFRAME.registerComponent('start-tracking', {
     const text = document.getElementById('loadingText')
     const CIV = document.createElement('a-entity')
     const container = document.getElementById('container')
+    container.style.backgroundImage = "url('assets/stabilization.gif')"
  
     setTimeout(() => {
 
