@@ -46,7 +46,7 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     openBar: function () {
-        document.getElementById('sidebar').style.width = "250px";
+        document.getElementById('sidebar').style.width = "190px";
         document.getElementsByClassName('openbtn').style.display = "inline-block"
         console.log('opened')
     } 
