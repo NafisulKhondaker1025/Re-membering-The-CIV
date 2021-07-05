@@ -79,6 +79,7 @@ body {
 #main {
   padding: 16px;
   z-index: 10;
+  display: block;
 }
 
 .openbtn {
