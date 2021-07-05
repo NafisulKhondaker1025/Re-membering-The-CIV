@@ -40,12 +40,12 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     closeBar: function () {
-        container.style.width = "0";
-        openbtn.style.display = "inline-block"
+        document.getElementById('sidebar').style.width = "0";
+        document.getElementsByClassName('openbtn').style.display = "inline-block"
     },
 
     openBar: function () {
-        container.style.width = "250px";
-        openbtn.style.display = "none"
+        document.getElementById('sidebar').style.width = "250px";
+        document.getElementsByClassName('openbtn').style.display = "inline-block"
     } 
 })
