@@ -10,7 +10,7 @@ AFRAME.registerComponent('populate-sidebar', {
         slider.setAttribute('min', '0')
         slider.setAttribute('max', '255')
         slider.setAttribute('value', '255')
-        slider.oninput = this.changeColor
+        slider.oninput = this.changeColor(slider.value)
         container.appendChild(slider)
         
     
@@ -22,15 +22,16 @@ AFRAME.registerComponent('populate-sidebar', {
         container.appendChild(closebtn)
 
         const main = document.getElementById('main')
-        const openbtn = document.createElement('button')
+        const openbtn = document.createElement('a')
+        openbtn.setAttribute('href', 'javascript:void(0)')
         openbtn.addEventListener('onclick', this.openBar)
         openbtn.innerHTML = "☰"
         openbtn.className = 'openbtn'
         main.appendChild(openbtn)
     },
 
-    changeColor: function () {
-        const hexColor = "#" + slider.value.toString(16) + slider.value.toString(16) + slider.value.toString(16)
+    changeColor: function (value) {
+        const hexColor = "#" + value.toString(16) + value.toString(16) + value.toString(16)
         const model = document.getElementById('model')
         const mesh = model.getObject3D('mesh')
         mesh.traverse(function (node) {

@@ -95,9 +95,7 @@ body {
   opacity: 1;
 }
 
-
 #container {
-    /*background-image: url(assets/stabilization.gif);*/
     background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
