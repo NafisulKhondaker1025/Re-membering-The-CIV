@@ -14,12 +14,15 @@
     <script async src="//apps.8thwall.com/xrweb?appKey=eByLX6OTQTfSKCCW8kiWoUbrmeMRw0sKoImo40cMp6Oh98hgmy9Bl4gEC6zavfAISXsnHp"></script>
 
     <script src="startTracking.js"></script>
+    <script src="sidebar.js"></script>
 
   </head>
 
   <body>
 
     <div id="container"></div>
+    <div id="sidebar"></div>
+    <div id="main">
 
     <a-scene
       xrextras-almost-there
@@ -27,7 +30,8 @@
       xrextras-runtime-error
       renderer="colorManagement:true"
       xrweb
-      start-tracking>
+      start-tracking
+      populate-sidebar>
 
       <a-assets>
         <a-asset-item id="3dmodel" src="assets/CIVf.glb"></a-asset-item>
@@ -72,5 +76,6 @@
         shadow>
       </a-box>
     </a-scene>
+  </div>
   </body>
 </html>
