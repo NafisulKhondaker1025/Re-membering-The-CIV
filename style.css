@@ -2,7 +2,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.sidebar {
+#sidebar {
   height: 100%;
   width: 0;
   position: fixed;
@@ -16,7 +16,7 @@ body {
   opacity: 50%;
 }
 
-.sidebar a {
+#sidebar a {
   padding: 8px 8px 8px 80px;
   text-decoration: none;
   font-size: 25px;
@@ -25,11 +25,11 @@ body {
   transition: 0.3s;
 }
 
-.sidebar .closebtn:hover {
+#sidebar .closebtn:hover {
   color: #000000;
 }
 
-.sidebar .closebtn {
+#sidebar .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
