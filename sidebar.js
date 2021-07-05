@@ -42,10 +42,12 @@ AFRAME.registerComponent('populate-sidebar', {
     closeBar: function () {
         document.getElementById('sidebar').style.width = "0";
         document.getElementsByClassName('openbtn').style.display = "inline-block"
+        console.log('closed')
     },
 
     openBar: function () {
         document.getElementById('sidebar').style.width = "250px";
         document.getElementsByClassName('openbtn').style.display = "inline-block"
+        console.log('opened')
     } 
 })
