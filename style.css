@@ -2,7 +2,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-/* #sidebar {
+#sidebar {
   height: 100%;
   width: 0;
   position: fixed;
@@ -74,10 +74,17 @@ body {
   border-radius: 50%;
   background: #ff0000;
   cursor: pointer;
-} */
+}
 
 #main {
-  padding: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
   z-index: 10;
   display: block;
 }
