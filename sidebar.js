@@ -31,12 +31,12 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     changeColor: function (value) {
-        const hexColor = "#" + value.toString(16) + value.toString(16) + value.toString(16)
-        const model = document.getElementById('model')
-        const mesh = model.getObject3D('mesh')
-        mesh.traverse(function (node) {
-            node.material.color = new THREE.Color(hexColor)
-        })
+        // const hexColor = "#" + value.toString(16) + value.toString(16) + value.toString(16)
+        // const model = document.getElementById('model')
+        // const mesh = model.getObject3D('mesh')
+        // mesh.traverse(function (node) {
+        //     node.material.color = new THREE.Color(hexColor)
+        // })
     },
 
     closeBar: function () {
