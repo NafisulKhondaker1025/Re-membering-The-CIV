@@ -29,7 +29,8 @@
       xrextras-loading
       xrextras-runtime-error
       renderer="colorManagement:true"
-      xrweb>
+      xrweb
+      populate-sidebar>
 
       <a-assets>
         <a-asset-item id="3dmodel" src="assets/CIVf.glb"></a-asset-item>
@@ -40,11 +41,11 @@
         cursor="
           fuse: false;
           rayOrigin: mouse;">
-        <!-- <a-entity
+        <a-entity
         id="loadingText"
         text="value: Please move your phone from right to left to calibrate scene; align: center; "
         scale="0.5 0.5 0.5"
-        position="0 0 -1"></a-entity> -->
+        position="0 0 -1"></a-entity>
       </a-camera>
 
       <a-entity
