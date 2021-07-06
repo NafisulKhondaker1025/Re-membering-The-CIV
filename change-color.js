@@ -7,6 +7,7 @@ AFRAME.registerComponent('change-color', {
         slider.setAttribute('min', '0')
         slider.setAttribute('max', '255')
         slider.setAttribute('value', '255')
+        slider.setAttribute('step', '1')
         container.appendChild(slider)
 
         const setColor = (value) => {
@@ -29,8 +30,8 @@ AFRAME.registerComponent('change-color', {
             setColor("155")
           })
         
-        slider.addEventListener('change', setColor(slider.value))
-        slider.addEventListener('input', setColor(slider.value))
+        slider.addEventListener('change', function() {setColor(slider.value)}, false)
+        slider.addEventListener('input', function() {setColor(slider.value)}, false)
     }
   });
 
