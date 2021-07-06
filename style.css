@@ -92,7 +92,7 @@ body {
   border: none;
 }
 
-#container {
+/* #container {
     background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
@@ -103,4 +103,4 @@ body {
     transform: translate(-50%, 0);
     z-index: 10;
     display: block;
-  }
+  } */
