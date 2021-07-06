@@ -27,7 +27,7 @@ AFRAME.registerComponent('change-color', {
             setColor("255")
           })
 
-        //slider.oninput = setColor(slider.value);
+        slider.oninput = setColor(slider.value);
 
     }
   });
