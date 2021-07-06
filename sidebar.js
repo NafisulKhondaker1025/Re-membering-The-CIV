@@ -31,7 +31,7 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     changeColor: function (value) {
-        document.getElementsByClassName('slider').style.opacity = "1"
+        //document.getElementsByClassName('slider').style.opacity = "1"
         // const hexColor = "#" + value.toString(16) + value.toString(16) + value.toString(16)
         // const model = document.getElementById('model')
         // const mesh = model.getObject3D('mesh')
