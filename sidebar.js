@@ -17,20 +17,21 @@ AFRAME.registerComponent('populate-sidebar', {
         const closebtn = document.createElement('a')
         closebtn.innerHTML = "x"
         closebtn.setAttribute('href', 'javascript:void(0)')
-        closebtn.addEventListener('onclick', this.closeBar)
+        closebtn.onclick = this.closeBar
         closebtn.className = 'closebtn'
         container.appendChild(closebtn)
 
         const main = document.getElementById('main')
         const openbtn = document.createElement('a')
         openbtn.setAttribute('href', 'javascript:void(0)')
-        openbtn.addEventListener('onclick', this.openBar)
+        openbtn.onclick = this.openBar
         openbtn.innerHTML = "☰"
         openbtn.className = 'openbtn'
         main.appendChild(openbtn)
     },
 
     changeColor: function (value) {
+        document.getElementsByClassName('slider').style.opacity = "1"
         // const hexColor = "#" + value.toString(16) + value.toString(16) + value.toString(16)
         // const model = document.getElementById('model')
         // const mesh = model.getObject3D('mesh')
@@ -40,12 +41,16 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     closeBar: function () {
+        document.getElementsByClassName('closebtn').style.color = "#000000"
+        document.getElementsByClassName('closebtn').style.opacity = "1"
         document.getElementById('sidebar').style.width = "0";
         document.getElementsByClassName('openbtn').style.display = "inline-block"
         console.log('closed')
     },
 
     openBar: function () {
+        document.getElementsByClassName('openbtn').style.color = "#000000"
+        document.getElementsByClassName('openbtn').style.opacity = "1"
         document.getElementById('sidebar').style.width = "190px";
         document.getElementsByClassName('openbtn').style.display = "inline-block"
         console.log('opened')
