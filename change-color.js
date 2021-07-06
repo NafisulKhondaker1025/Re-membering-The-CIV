@@ -27,7 +27,7 @@
 
 AFRAME.registerComponent('change-color', {
     init: function () {
-      this.el.addEventListener('model-loaded', this.update.bind(this));
+      //this.el.addEventListener('model-loaded', this.update.bind(this));
     },
     update: function () {
       var mesh = this.el.getObject3D('mesh');
