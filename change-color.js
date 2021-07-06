@@ -8,7 +8,6 @@ AFRAME.registerComponent('change-color', {
         slider.setAttribute('max', '255')
         slider.setAttribute('value', '255')
         container.appendChild(slider)
-        slider.oninput = setColor(slider.value);
 
         const setColor = (value) => {
             // var value = document.getElementById('slide').value
@@ -23,6 +22,9 @@ AFRAME.registerComponent('change-color', {
                 }
             });
         }
+
+        slider.oninput = setColor(slider.value);
+
     }
   });
 
