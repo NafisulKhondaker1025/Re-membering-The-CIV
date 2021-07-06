@@ -21,6 +21,6 @@ AFRAME.registerComponent('change-color', {
           node.material.color = new THREE.Color(hexColor);
           node.material.needsUpdate = true;
         }
-      //});
+      });
     }
   });
