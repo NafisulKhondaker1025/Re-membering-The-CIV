@@ -34,8 +34,7 @@ AFRAME.registerComponent('populate-sidebar', {
 
     changeColor: function (value) {
         const hexColor = "#" + value.toString(16) + value.toString(16) + value.toString(16)
-        const glbmodel = document.getElementById('model').gltf-model
-        modelMesh = glbmodel.getObject3D('mesh')
+        modelMesh = this.el.getObject3D('mesh')
         if (!modelMesh) { return; }
             if (node.isMesh) {
             modelMesh.traverse((node) => {

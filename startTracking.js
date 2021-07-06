@@ -1,11 +1,9 @@
 AFRAME.registerComponent('start-tracking', {
     init: function() {
     const text = document.getElementById('loadingText')
-    const CIV = document.createElement('a-entity')
-    CIV.id = 'model'
+    const CIV = document.getElementById('model')
     CIV.setAttribute('gltf-model', '#3dmodel')
     CIV.setAttribute('visible', 'false')
-    this.el.sceneEl.appendChild(CIV) 
     const container = document.getElementById('container')
     container.style.backgroundImage = "url('assets/stabilization.gif')"
  

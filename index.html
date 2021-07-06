@@ -30,8 +30,7 @@
       xrextras-runtime-error
       renderer="colorManagement:true"
       xrweb
-      start-tracking
-      populate-sidebar>
+      start-tracking>
 
       <a-assets>
         <a-asset-item id="3dmodel" src="assets/CIVf.glb"></a-asset-item>
@@ -67,6 +66,8 @@
       </a-entity>
 
       <a-light type="ambient" intensity="0.5"></a-light>
+
+      <a-entity id="model" populate-sidebar></a-entity>
 
       <a-box
         id="ground"
