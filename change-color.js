@@ -22,8 +22,12 @@ AFRAME.registerComponent('change-color', {
                 }
             });
         }
+        
+        this.el.sceneEl.addEventListener('realityready', () => {
+            setColor("255")
+          })
 
-        slider.oninput = setColor(slider.value);
+        //slider.oninput = setColor(slider.value);
 
     }
   });
