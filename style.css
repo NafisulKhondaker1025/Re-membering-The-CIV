@@ -17,9 +17,9 @@ body {
 }
 
 #sidebar a {
-  padding: 8px 15px 8px 15px;
+  padding: 8px 15px 8px 20px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: #ffffff;
   display: block;
   transition: 0.3s;
@@ -29,8 +29,8 @@ body {
   background-color: transparent;
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 36px;
+  right: 2px;
+  font-size: 25px;
   margin-left: 50px;
   color:  #ffffff;
 }
@@ -40,8 +40,8 @@ body {
   -webkit-appearance: none;
   transform: rotate(90deg);
   top: 50%;
-  left: -50%;
-  width: 190%;
+  left: -128%;
+  width: 350%;
   height: 15px;
   border-radius: 5px;
   background: #d3d3d3;

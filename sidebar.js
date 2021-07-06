@@ -49,7 +49,7 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     openBar: function () {
-        document.getElementById('sidebar').style.width = "190px";
+        document.getElementById('sidebar').style.width = "150px";
         document.getElementById('main').style.display = "none"
         console.log('opened')
     } 
