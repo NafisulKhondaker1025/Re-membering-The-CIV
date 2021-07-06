@@ -15,6 +15,7 @@
 
     <!-- <script src="startTracking.js"></script> -->
     <script src="sidebar.js"></script>
+    <script src="change-color.js"></script>
 
   </head>
 
@@ -29,7 +30,8 @@
       xrextras-loading
       xrextras-runtime-error
       renderer="colorManagement:true"
-      xrweb>
+      xrweb
+      populate-sidebar>
 
       <a-assets>
         <a-asset-item id="3dmodel" src="assets/CIVf.glb"></a-asset-item>
@@ -71,7 +73,7 @@
        gltf-model = "#3dmodel"
        rotation = "0 180 0"
        scale = "1 1 1"
-       populate-sidebar>
+       change-color>
       </a-entity>
 
       <a-box
