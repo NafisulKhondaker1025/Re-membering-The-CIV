@@ -35,12 +35,9 @@ AFRAME.registerComponent('populate-sidebar', {
     changeColor: function (value) {
         const hexColor = "#" + value.toString(16) + value.toString(16) + value.toString(16)
         modelMesh = this.el.getObject3D('mesh')
-        if (!modelMesh) { return; }
-            if (node.isMesh) {
-            modelMesh.traverse((node) => {
-                node.material.color = new THREE.Color(hexColor)
-            })
-        }
+        modelMesh.traverse((node) => {
+            node.material.color = new THREE.Color(hexColor)
+        })
     },
 
     closeBar: function () {
