@@ -46,7 +46,7 @@ AFRAME.registerComponent('populate-sidebar', {
         document.getElementById('close').style.color = "#000000"
         document.getElementById('close').style.opacity = "1"
         document.getElementById('sidebar').style.width = "0";
-        document.getElementById('open').style.display = "inline-block"
+        document.getElementById('main').style.display = "block"
         console.log('closed')
     },
 
@@ -54,7 +54,7 @@ AFRAME.registerComponent('populate-sidebar', {
         document.getElementById('open').style.color = "#000000"
         document.getElementById('open').style.opacity = "1"
         document.getElementById('sidebar').style.width = "190px";
-        document.getElementById('open').style.display = "inline-block"
+        document.getElementById('main').style.display = "none"
         console.log('opened')
     } 
 })
