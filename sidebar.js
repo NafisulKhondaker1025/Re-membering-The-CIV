@@ -26,7 +26,7 @@ AFRAME.registerComponent('populate-sidebar', {
         const openbtn = document.createElement('a')
         openbtn.setAttribute('href', 'javascript:void(0)')
         openbtn.onclick = this.openBar
-        openbtn.innerHTML = "☰"
+        openbtn.innerHTML = "Menu"
         openbtn.className = 'openbtn'
         openbtn.id = 'open'
         main.appendChild(openbtn)
