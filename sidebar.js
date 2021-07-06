@@ -43,16 +43,12 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     closeBar: function () {
-        document.getElementById('close').style.color = "#000000"
-        document.getElementById('close').style.opacity = "1"
         document.getElementById('sidebar').style.width = "0";
         document.getElementById('main').style.display = "block"
         console.log('closed')
     },
 
     openBar: function () {
-        document.getElementById('open').style.color = "#000000"
-        document.getElementById('open').style.opacity = "1"
         document.getElementById('sidebar').style.width = "190px";
         document.getElementById('main').style.display = "none"
         console.log('opened')
