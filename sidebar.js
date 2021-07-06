@@ -19,6 +19,7 @@ AFRAME.registerComponent('populate-sidebar', {
         closebtn.setAttribute('href', 'javascript:void(0)')
         closebtn.onclick = this.closeBar
         closebtn.className = 'closebtn'
+        closebtn.id = 'close'
         container.appendChild(closebtn)
 
         const main = document.getElementById('main')
@@ -27,6 +28,7 @@ AFRAME.registerComponent('populate-sidebar', {
         openbtn.onclick = this.openBar
         openbtn.innerHTML = "☰"
         openbtn.className = 'openbtn'
+        openbtn.id = 'open'
         main.appendChild(openbtn)
     },
 
@@ -41,18 +43,18 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     closeBar: function () {
-        document.getElementsByClassName('closebtn').style.color = "#000000"
-        document.getElementsByClassName('closebtn').style.opacity = "1"
+        document.getElementById('close').style.color = "#000000"
+        document.getElementById('close').style.opacity = "1"
         document.getElementById('sidebar').style.width = "0";
-        document.getElementsByClassName('openbtn').style.display = "inline-block"
+        document.getElementById('open').style.display = "inline-block"
         console.log('closed')
     },
 
     openBar: function () {
-        document.getElementsByClassName('openbtn').style.color = "#000000"
-        document.getElementsByClassName('openbtn').style.opacity = "1"
+        document.getElementById('open').style.color = "#000000"
+        document.getElementById('open').style.opacity = "1"
         document.getElementById('sidebar').style.width = "190px";
-        document.getElementsByClassName('openbtn').style.display = "inline-block"
+        document.getElementById('open').style.display = "inline-block"
         console.log('opened')
     } 
 })
