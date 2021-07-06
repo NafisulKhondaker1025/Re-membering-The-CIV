@@ -28,9 +28,9 @@ AFRAME.registerComponent('change-color', {
         this.el.sceneEl.addEventListener('realityready', () => {
             setColor("155")
           })
-
-        slider.oninput = setColor(slider.value);
-
+        
+        slider.addEventListener('change', setColor(slider.value))
+        slider.addEventListener('input', setColor(slider.value))
     }
   });
 
