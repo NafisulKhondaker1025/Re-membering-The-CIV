@@ -4,15 +4,15 @@ AFRAME.registerComponent('populate-sidebar', {
         const colorText = document.createElement('a')
         colorText.innerHTML = "Adjust Color"
         container.appendChild(colorText)
-        const slider = document.createElement('input')
-        slider.className = 'slider'
-        slider.id = 'slide'
-        slider.setAttribute('type', 'range')
-        slider.setAttribute('min', '0')
-        slider.setAttribute('max', '255')
-        slider.setAttribute('value', '255')
-        //slider.oninput = this.changeColor(slider.value)
-        container.appendChild(slider)
+        // const slider = document.createElement('input')
+        // slider.className = 'slider'
+        // slider.id = 'slide'
+        // slider.setAttribute('type', 'range')
+        // slider.setAttribute('min', '0')
+        // slider.setAttribute('max', '255')
+        // slider.setAttribute('value', '255')
+        // //slider.oninput = this.changeColor(slider.value)
+        // container.appendChild(slider)
         
     
         const closebtn = document.createElement('a')
