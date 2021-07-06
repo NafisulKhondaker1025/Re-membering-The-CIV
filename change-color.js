@@ -11,7 +11,7 @@ AFRAME.registerComponent('change-color', {
 
         const setColor = (value) => {
             // var value = document.getElementById('slide').value
-            var hexColor = value.toString(16)
+            var hexColor = value.toString(2)
             console.log(hexColor)
             hexColor = "#" + hexColor + hexColor + hexColor
             console.log(hexColor)
