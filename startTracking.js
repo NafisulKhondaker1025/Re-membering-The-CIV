@@ -17,7 +17,7 @@ AFRAME.registerComponent('start-tracking', {
       CIV.setAttribute('visible', 'true')
       CIV.setAttribute('animation', {
         property: 'scale',
-        to: '1 1 1',
+        to: '2 2 2',
         easing: 'easeOutElastic',
         dur: 800,
       })
