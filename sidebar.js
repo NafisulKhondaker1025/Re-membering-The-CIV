@@ -4,15 +4,16 @@ AFRAME.registerComponent('populate-sidebar', {
         const colorText = document.createElement('a')
         colorText.innerHTML = "Adjust Color"
         container.appendChild(colorText)
-        // const slider = document.createElement('input')
-        // slider.className = 'slider'
-        // slider.id = 'slide'
-        // slider.setAttribute('type', 'range')
-        // slider.setAttribute('min', '0')
-        // slider.setAttribute('max', '255')
-        // slider.setAttribute('value', '255')
-        // //slider.oninput = this.changeColor(slider.value)
-        // container.appendChild(slider)
+        const slider = document.createElement('input')
+        slider.className = 'slider'
+        slider.id = 'slide'
+        slider.setAttribute('type', 'range')
+        slider.setAttribute('min', '0')
+        slider.setAttribute('max', '255')
+        slider.setAttribute('value', '255')
+        slider.addEventListener('change', function() {this.changeColor(slider.value)}, false)
+        slider.addEventListener('input', function() {this.changeColor(slider.value)}, false)
+        container.appendChild(slider)
         
     
         const closebtn = document.createElement('a')
@@ -33,13 +34,26 @@ AFRAME.registerComponent('populate-sidebar', {
         main.appendChild(openbtn)
     },
 
-    // changeColor: function (value) {
-    //     const hexColor = "#" + value.toString(16) + value.toString(16) + value.toString(16)
-    //     modelMesh = this.el.getObject3D('mesh')
-    //     modelMesh.traverse((node) => {
-    //         node.material.color = new THREE.Color(hexColor)
-    //     })
-    // },
+    changeColor: function (value) {
+        function pad(num){
+            if (num.length<2) {
+                num += '0' + num
+                return num
+            }    
+        }
+        var hexColor = parseInt(value, 10).toString(16)
+        hexColor = pad(hexColor)
+        hexColor = "#" + hexColor + hexColor + hexColor
+        console.log(hexColor)
+        var mesh = document.getElementById('model').getObject3D('mesh');
+        if (!mesh) { return; }
+        mesh.traverse((node) => {
+            if (node.isMesh) {
+            node.material.color = new THREE.Color(hexColor);
+            node.material.needsUpdate = true;
+            }
+        });
+    },
 
     closeBar: function () {
         document.getElementById('sidebar').style.width = "0";
