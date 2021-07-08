@@ -43,7 +43,6 @@ AFRAME.registerComponent('populate-sidebar', {
             var hexColor = parseInt(value, 10).toString(16)
             hexColor = pad(hexColor)
             hexColor = "#" + hexColor + hexColor + hexColor
-            console.log(hexColor)
             var mesh = document.getElementById('model').getObject3D('mesh');
             if (!mesh) { return; }
             mesh.traverse((node) => {
@@ -61,12 +60,10 @@ AFRAME.registerComponent('populate-sidebar', {
     closeBar: function () {
         document.getElementById('sidebar').style.width = "0";
         document.getElementById('main').style.display = "block"
-        console.log('closed')
     },
 
     openBar: function () {
         document.getElementById('sidebar').style.width = "150px";
         document.getElementById('main').style.display = "none"
-        console.log('opened')
     } 
 })
