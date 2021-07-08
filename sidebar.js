@@ -11,8 +11,6 @@ AFRAME.registerComponent('populate-sidebar', {
         slider.setAttribute('min', '0')
         slider.setAttribute('max', '255')
         slider.setAttribute('value', '255')
-        slider.addEventListener('change', function() {this.changeColor(slider.value)}, false)
-        slider.addEventListener('input', function() {this.changeColor(slider.value)}, false)
         container.appendChild(slider)
         
     
@@ -32,27 +30,30 @@ AFRAME.registerComponent('populate-sidebar', {
         openbtn.className = 'openbtn'
         openbtn.id = 'open'
         main.appendChild(openbtn)
-    },
 
-    changeColor: function (value) {
-        function pad(num){
-            if (num.length<2) {
-                num += '0' + num
-                return num
-            }    
-        }
-        var hexColor = parseInt(value, 10).toString(16)
-        hexColor = pad(hexColor)
-        hexColor = "#" + hexColor + hexColor + hexColor
-        console.log(hexColor)
-        var mesh = document.getElementById('model').getObject3D('mesh');
-        if (!mesh) { return; }
-        mesh.traverse((node) => {
-            if (node.isMesh) {
-            node.material.color = new THREE.Color(hexColor);
-            node.material.needsUpdate = true;
+        function changeColor(value) {
+            function pad(num){
+                if (num.length<2) {
+                    num += '0' + num
+                    return num
+                }    
             }
-        });
+            var hexColor = parseInt(value, 10).toString(16)
+            hexColor = pad(hexColor)
+            hexColor = "#" + hexColor + hexColor + hexColor
+            console.log(hexColor)
+            var mesh = document.getElementById('model').getObject3D('mesh');
+            if (!mesh) { return; }
+            mesh.traverse((node) => {
+                if (node.isMesh) {
+                node.material.color = new THREE.Color(hexColor);
+                node.material.needsUpdate = true;
+                }
+            });
+        }
+
+        slider.addEventListener('change', function() {changeColor(slider.value)}, false)
+        slider.addEventListener('input', function() {changeColor(slider.value)}, false)
     },
 
     closeBar: function () {
