@@ -34,7 +34,9 @@ AFRAME.registerComponent('populate-sidebar', {
         function changeColor(value) {
             function pad(num){
                 if (num.length<2) {
-                    num += '0' + num
+                    return ('0' + num)
+                }
+                else {
                     return num
                 }    
             }
