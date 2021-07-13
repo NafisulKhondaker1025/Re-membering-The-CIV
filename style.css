@@ -17,8 +17,7 @@ body {
 }
 
 #sidebar a {
-  position: absolute;
-  left: 12%;
+  padding: 8px 15px 8px 20px;
   text-decoration: none;
   font-size: 20px;
   color: #ffffff;
@@ -28,9 +27,11 @@ body {
 
 #sidebar .closebtn {
   background-color: transparent;
-  top: 0.4%;
-  left: 85%;
+  position: absolute;
+  top: 0;
+  right: 2px;
   font-size: 25px;
+  margin-left: 50px;
   color:  #ffffff;
 }
 
