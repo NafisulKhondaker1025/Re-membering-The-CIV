@@ -40,8 +40,8 @@ body {
   -webkit-appearance: none;
   transform: rotate(90deg);
   top: 50%;
-  left: -128%;
-  width: 350%;
+  left: -128vw;
+  width: 350vw;
   height: 15px;
   border-radius: 5px;
   background: #d3d3d3;
