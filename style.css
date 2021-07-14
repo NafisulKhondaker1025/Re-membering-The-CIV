@@ -3,16 +3,15 @@ body {
 }
 
 #sidebar {
-  height: 100%;
-  width: 0;
+  height: 0;
+  width: 100%;
   position: fixed;
   z-index: 10;
-  top: 0;
+  bottom: 0;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
   opacity: 50%;
 }
 
@@ -70,15 +69,18 @@ body {
 }
 
 #main {
-  height: 20%;
+  height: 40%;
   width: 100%;
   position: fixed;
   z-index: 10;
-  top: 2.4%;
+  bottom: 0;
   left: 0;
 }
 
 .openbtn {
+  position: absolute;
+  bottom: 10%;
+  left: 38%;
   font-size: 20px;
   text-decoration: none;
   cursor: pointer;

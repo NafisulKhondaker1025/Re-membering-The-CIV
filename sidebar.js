@@ -5,7 +5,6 @@ AFRAME.registerComponent('populate-sidebar', {
         colorText.innerHTML = "Adjust Color"
         container.appendChild(colorText)
         const slider = document.createElement('input')
-        slider.setAttribute('orient', 'vertical')
         slider.className = 'slider'
         slider.id = 'slide'
         slider.setAttribute('type', 'range')
@@ -59,12 +58,12 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     closeBar: function () {
-        document.getElementById('sidebar').style.width = "0";
+        document.getElementById('sidebar').style.height = "0";
         document.getElementById('main').style.display = "block"
     },
 
     openBar: function () {
-        document.getElementById('sidebar').style.width = "36%";
+        document.getElementById('sidebar').style.height = "20%";
         document.getElementById('main').style.display = "none"
     } 
 })
