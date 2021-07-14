@@ -39,9 +39,9 @@ body {
   -webkit-appearance: none;
   /* transform: rotate(90deg); */
   top: 50%;
-  left: -128%;
-  width: 350%;
-  height: 1.5%;
+  left: 4%;
+  width: 90%;
+  height: 5%;
   border-radius: 5px;
   background: #d3d3d3;
   outline: none;
