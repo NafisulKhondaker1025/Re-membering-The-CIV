@@ -38,7 +38,7 @@ body {
 .slider {
   position: absolute;
   -webkit-appearance: none;
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
   top: 50%;
   left: -128%;
   width: 350%;

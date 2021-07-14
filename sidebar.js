@@ -5,6 +5,7 @@ AFRAME.registerComponent('populate-sidebar', {
         colorText.innerHTML = "Adjust Color"
         container.appendChild(colorText)
         const slider = document.createElement('input')
+        slider.setAttribute('orient', 'vertical')
         slider.className = 'slider'
         slider.id = 'slide'
         slider.setAttribute('type', 'range')
