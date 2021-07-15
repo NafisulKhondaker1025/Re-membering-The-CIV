@@ -24,6 +24,29 @@
     <div id="sidebar"></div>
     <div id="main"></div>
 
+    <xrextras-capture-button capture-mode="standard"></xrextras-capture-button>
+
+    <xrextras-capture-config
+      max-duration-ms="15000"
+      max-dimension="1280"
+      enable-end-card="true"
+      cover-image-url=""
+      end-card-call-to-action="Try it at:"
+      short-link=""
+      footer-image-url="//cdn.8thwall.com/web/img/almostthere/v2/poweredby-horiz-white-2.svg"
+      watermark-image-url="//cdn.8thwall.com/web/img/mediarecorder/8logo.png"
+      watermark-max-width="100"
+      watermark-max-height="10"
+      watermark-location="bottomRight"
+      file-name-prefix="my-capture-"
+    ></xrextras-capture-config>
+
+    <xrextras-capture-preview
+      action-button-share-text="Share"
+      action-button-view-text="View"
+      finalize-text="Exporting..."
+    ></xrextras-capture-preview>
+
     <a-scene
       xrextras-almost-there
       xrextras-loading
