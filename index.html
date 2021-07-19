@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>abox control</title>
+    <title>-5 0.5 0</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -23,7 +23,7 @@
     <div id="container"></div>
     <div id="sidebar"></div>
     <div id="main"></div>
-    
+
     <a-scene
       xrextras-almost-there
       xrextras-loading
@@ -31,6 +31,7 @@
       renderer="colorManagement:true"
       xrweb
       start-tracking
+      recenter="recenterDistance: 3; recenterHeight: 1; recenterFactor: 0"
       populate-sidebar>
 
       <a-assets>
@@ -38,10 +39,7 @@
       </a-assets>
 
       <a-camera
-        position="0 1 0"
-        cursor="
-          fuse: false;
-          rayOrigin: mouse;">
+        position="0 1 0">
         <a-entity
         id="loadingText"
         text="value: Please move your phone from right to left to calibrate scene; align: center; "
@@ -68,13 +66,6 @@
 
       <a-light type="ambient" intensity="0.5"></a-light>
       
-      <a-box
-        id="ground"
-        scale="1000 2 1000"
-        position="0 -1 0"
-        material="transparent: true; opacity: 0"
-        shadow>
-      </a-box>
     </a-scene>
   </body>
 </html>
