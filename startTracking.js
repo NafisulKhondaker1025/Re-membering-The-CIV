@@ -14,8 +14,9 @@ AFRAME.registerComponent('start-tracking', {
       CIV.setAttribute('scale', '0.5 0.5 0.5')
       CIV.setAttribute('visible', 'true')
       text.setAttribute('visible', 'false')
-      const capbtn = document.createElement('xrextras-capture-button')
-      capbtn.setAttribute('capture-mode', 'standard')
+      const capture = document.createElement('xrextras-capture-button')
+      capture.setAttribute('capture-mode', 'standard')
+      this.el.sceneEl.appendChild(capture)
       container.style.display = "none"
     }, 15000)
   }
