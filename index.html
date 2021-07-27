@@ -38,7 +38,7 @@
         <a-asset-item id="3dmodel" src="assets/CIVf.glb"></a-asset-item>
       </a-assets>
 
-      <xrextras-capture-button capture-mode="standard"></xrextras-capture-button>
+      <xrextras-capture-button id="capbtn" capture-mode="standard" visible="false"></xrextras-capture-button>
 
       <xrextras-capture-config
         max-duration-ms="15000"
@@ -58,6 +58,7 @@
       ></xrextras-capture-preview>
 
       <a-camera
+        id="camera"
         position="0 1 0">
         <a-entity
         id="loadingText"
