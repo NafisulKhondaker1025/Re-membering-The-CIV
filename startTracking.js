@@ -1,7 +1,6 @@
 AFRAME.registerComponent('start-tracking', {
     init: function() {
     const text = document.getElementById('loadingText')
-    const capture = document.getElementById('capbtn')
     const container = document.getElementById('container')
     container.style.backgroundImage = "url('assets/stabilization.gif')"
  
@@ -15,7 +14,8 @@ AFRAME.registerComponent('start-tracking', {
       CIV.setAttribute('scale', '0.5 0.5 0.5')
       CIV.setAttribute('visible', 'true')
       text.setAttribute('visible', 'false')
-      capture.setAttribute('visible', 'true')
+      const capbtn = document.createElement('xrextras-capture-button')
+      capbtn.setAttribute('capture-mode', 'standard')
       container.style.display = "none"
     }, 15000)
   }
