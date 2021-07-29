@@ -5,6 +5,7 @@ AFRAME.registerComponent('populate-sidebar', {
         const colorbtn = document.createElement('a')
         colorbtn.setAttribute('href', 'javascript:void(0)')
         colorbtn.innerHTML = "Adjust Color"
+        colorbtn.onclick = this.openSlider
         sidebar.appendChild(colorbtn)
         const slider = document.createElement('input')
         slider.className = 'slider'
@@ -14,6 +15,7 @@ AFRAME.registerComponent('populate-sidebar', {
         slider.setAttribute('max', '255')
         slider.setAttribute('value', '255')
         main.appendChild(slider)
+        slider.style.display = "none"
         
     
         const closebtn = document.createElement('a')
@@ -56,6 +58,12 @@ AFRAME.registerComponent('populate-sidebar', {
 
         slider.addEventListener('change', function() {changeColor(slider.value)}, false)
         slider.addEventListener('input', function() {changeColor(slider.value)}, false)
+    },
+
+    openSlider: function () {
+        document.getElementById('sidebar').style.width = "0";
+        document.getElementById('slide').style.display = "block";
+        document.getElementById('open').style.display = "block"
     },
 
     closeBar: function () {
