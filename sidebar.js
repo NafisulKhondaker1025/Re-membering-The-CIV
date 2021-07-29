@@ -63,7 +63,7 @@ AFRAME.registerComponent('populate-sidebar', {
     openSlider: function () {
         document.getElementById('sidebar').style.width = "0";
         document.getElementById('slide').style.display = "block";
-        document.getElementById('open').style.display = "block"
+        document.getElementById('main').style.display = "block"
     },
 
     closeBar: function () {
