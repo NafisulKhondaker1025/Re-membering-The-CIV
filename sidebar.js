@@ -1,6 +1,7 @@
 AFRAME.registerComponent('populate-sidebar', {
     init: function () {
         const sidebar = document.getElementById('sidebar')
+        const main = document.getElementById('main')
         const colorbtn = document.createElement('a')
         colorbtn.setAttribute('href', 'javascript:void(0)')
         colorbtn.innerHTML = "Adjust Color"
@@ -23,7 +24,6 @@ AFRAME.registerComponent('populate-sidebar', {
         closebtn.id = 'close'
         sidebar.appendChild(closebtn)
 
-        const main = document.getElementById('main')
         const openbtn = document.createElement('a')
         openbtn.setAttribute('href', 'javascript:void(0)')
         openbtn.onclick = this.openBar
