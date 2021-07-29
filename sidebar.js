@@ -68,11 +68,11 @@ AFRAME.registerComponent('populate-sidebar', {
 
     closeBar: function () {
         document.getElementById('sidebar').style.width = "0";
-        document.getElementById('open').style.display = "block"
+        document.getElementById('main').style.display = "block"
     },
 
     openBar: function () {
         document.getElementById('sidebar').style.width = "35%";
-        document.getElementById('open').style.display = "none"
+        document.getElementById('main').style.display = "none"
     } 
 })
