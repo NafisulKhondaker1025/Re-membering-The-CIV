@@ -12,7 +12,7 @@ AFRAME.registerComponent('populate-sidebar', {
         slider.setAttribute('min', '0')
         slider.setAttribute('max', '255')
         slider.setAttribute('value', '255')
-        sidebar.appendChild(slider)
+        main.appendChild(slider)
         
     
         const closebtn = document.createElement('a')
@@ -59,12 +59,12 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     closeBar: function () {
-        document.getElementById('sidebar').style.height = "0";
-        document.getElementById('main').style.display = "block"
+        document.getElementById('sidebar').style.width = "0";
+        document.getElementById('open').style.display = "block"
     },
 
     openBar: function () {
-        document.getElementById('sidebar').style.height = "20%";
-        document.getElementById('main').style.display = "none"
+        document.getElementById('sidebar').style.width = "35%";
+        document.getElementById('open').style.display = "none"
     } 
 })
