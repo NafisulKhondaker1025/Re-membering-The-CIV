@@ -1,9 +1,10 @@
 AFRAME.registerComponent('populate-sidebar', {
     init: function () {
-        const container = document.getElementById('sidebar')
-        const colorText = document.createElement('a')
-        colorText.innerHTML = "Adjust Color"
-        container.appendChild(colorText)
+        const sidebar = document.getElementById('sidebar')
+        const colorbtn = document.createElement('a')
+        colorbtn.setAttribute('href', 'javascript:void(0)')
+        colorbtn.innerHTML = "Adjust Color"
+        sidebar.appendChild(colorbtn)
         const slider = document.createElement('input')
         slider.className = 'slider'
         slider.id = 'slide'
@@ -11,7 +12,7 @@ AFRAME.registerComponent('populate-sidebar', {
         slider.setAttribute('min', '0')
         slider.setAttribute('max', '255')
         slider.setAttribute('value', '255')
-        container.appendChild(slider)
+        sidebar.appendChild(slider)
         
     
         const closebtn = document.createElement('a')
@@ -20,7 +21,7 @@ AFRAME.registerComponent('populate-sidebar', {
         closebtn.onclick = this.closeBar
         closebtn.className = 'closebtn'
         closebtn.id = 'close'
-        container.appendChild(closebtn)
+        sidebar.appendChild(closebtn)
 
         const main = document.getElementById('main')
         const openbtn = document.createElement('a')

@@ -17,7 +17,7 @@ AFRAME.registerComponent('start-tracking', {
       const capture = document.createElement('xrextras-capture-button')
       capture.setAttribute('capture-mode', 'standard')
       this.el.sceneEl.appendChild(capture)
-      container.style.display = "none"
+      container.style.backgroundImage = "none"
     }, 15000)
   }
 })
