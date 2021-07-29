@@ -13,7 +13,7 @@ AFRAME.registerComponent('start-tracking', {
       CIV.setAttribute('rotation', '0 225 0')
       CIV.setAttribute('scale', '0.5 0.5 0.5')
       CIV.setAttribute('visible', 'true')
-      text.setAttribute('visible', 'false')
+      //text.setAttribute('visible', 'false')
       const capture = document.createElement('xrextras-capture-button')
       capture.setAttribute('capture-mode', 'standard')
       this.el.sceneEl.appendChild(capture)
