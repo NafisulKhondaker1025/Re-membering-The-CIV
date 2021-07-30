@@ -9,10 +9,9 @@ body {
   z-index: 10;
   bottom: 0;
   left: 0;
-  background-color: #111;
+  background-color: rgba(0, 0, 0, 0.5);
   overflow-x: hidden;
   transition: 0.5s;
-  opacity: 50%;
 }
 
 #sidebar a {
@@ -22,6 +21,7 @@ body {
   top: 8%;
   text-decoration: none;
   font-size: 120%;
+  font-weight: 1000;
   color: #ffffff;
   display: block;
   transition: 0.3s;
@@ -98,14 +98,14 @@ body {
 
 .donebtn {
   position: absolute;
-  top: 1%;
-  left: 79%;
+  top: 2%;
+  left: 77%;
   font-size: 20px;
   text-decoration: none;
   cursor: pointer;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 10px 10px;
+  padding: 1% 2%;
   border: none;
 }
 
