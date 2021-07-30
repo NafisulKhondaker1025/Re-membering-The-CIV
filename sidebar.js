@@ -98,7 +98,10 @@ AFRAME.registerComponent('populate-sidebar', {
          document.getElementById('done').style.display = "none"
          document.getElementById('open').style.display = "block"
          document.getElementById('slide').style.display = "none"
-         document.getElementById('capbtn').style.display = "none"
+         let capture = document.getElementById('capbtn')
+         if (capture) {
+            capture.remove()
+         }
      }, 
 
     closeBar: function () {
