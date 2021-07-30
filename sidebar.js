@@ -86,7 +86,7 @@ AFRAME.registerComponent('populate-sidebar', {
         const scene = document.getElementById('scene')
         const capture = document.createElement('xrextras-capture-button')
         capture.setAttribute('capture-mode', 'standard')
-        capture.id = capbtn
+        capture.id = 'capbtn'
         scene.appendChild(capture)
         document.getElementById('sidebar').style.width = "0";
         document.getElementById('main').style.display = "block"
