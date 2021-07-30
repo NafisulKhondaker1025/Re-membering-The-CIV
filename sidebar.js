@@ -10,7 +10,7 @@ AFRAME.registerComponent('populate-sidebar', {
         const capturebtn = document.createElement('a')
         capturebtn.setAttribute('href', 'javascript:void(0)')
         capturebtn.innerHTML = "Capture"
-        capturebtn.onclick = this.openSlider
+        capturebtn.onclick = this.openCapture
         sidebar.appendChild(capturebtn)
 
         const slider = document.createElement('input')
@@ -77,24 +77,35 @@ AFRAME.registerComponent('populate-sidebar', {
     openSlider: function () {
         document.getElementById('sidebar').style.width = "0";
         document.getElementById('slide').style.display = "block";
-        document.getElementById('main').style.display = "block"
         document.getElementById('open').style.display = "none"
         document.getElementById('done').style.display = "block"
     },
 
     closeBar: function () {
         document.getElementById('sidebar').style.width = "0";
-        document.getElementById('main').style.display = "block"
+        document.getElementById('open').style.display = "block"
     },
 
     openBar: function () {
         document.getElementById('sidebar').style.width = "35%";
-        document.getElementById('main').style.display = "none"
+        document.getElementById('open').style.display = "none"
     }, 
+
+    openCapture: function () {
+       const scene = document.getElementById('scene')
+       const capture = document.createElement('xrextras-capture-button')
+       capture.setAttribute('capture-mode', 'standard')
+       capture.id = capbtn
+       scene.appendChild(capture)
+       document.getElementById('sidebar').style.width = "0";
+       document.getElementById('open').style.display = "none"
+       document.getElementById('done').style.display = "block"
+    },
 
     done: function () {
         document.getElementById('done').style.display = "none"
         document.getElementById('open').style.display = "block"
-        document.getElementById('main').style.display = "none"
+        document.getElementById('slide').style.display = "none"
+        document.getElementById('capbtn').style.display = "none"
     } 
 })
