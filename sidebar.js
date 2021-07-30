@@ -2,6 +2,13 @@ AFRAME.registerComponent('populate-sidebar', {
     init: function () {
         const sidebar = document.getElementById('sidebar')
         const main = document.getElementById('main')
+        const closebtn = document.createElement('a')
+        closebtn.innerHTML = "x"
+        closebtn.setAttribute('href', 'javascript:void(0)')
+        closebtn.onclick = this.closeBar
+        closebtn.className = 'closebtn'
+        closebtn.id = 'close'
+        sidebar.appendChild(closebtn)
         const colorbtn = document.createElement('a')
         colorbtn.setAttribute('href', 'javascript:void(0)')
         colorbtn.innerHTML = "Adjust Color"
@@ -22,15 +29,6 @@ AFRAME.registerComponent('populate-sidebar', {
         slider.setAttribute('value', '255')
         main.appendChild(slider)
         slider.style.display = "none"
-        
-    
-        const closebtn = document.createElement('a')
-        closebtn.innerHTML = "x"
-        closebtn.setAttribute('href', 'javascript:void(0)')
-        closebtn.onclick = this.closeBar
-        closebtn.className = 'closebtn'
-        closebtn.id = 'close'
-        sidebar.appendChild(closebtn)
 
         const openbtn = document.createElement('a')
         openbtn.setAttribute('href', 'javascript:void(0)')
@@ -46,6 +44,7 @@ AFRAME.registerComponent('populate-sidebar', {
         donebtn.innerHTML = "✓ Done"
         donebtn.className = 'donebtn'
         donebtn.id = 'done'
+        donebtn.style.display = "none"
         main.appendChild(donebtn)
 
         function changeColor(value) {
