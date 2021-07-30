@@ -92,6 +92,19 @@ body {
   border: none;
 }
 
+.donebtn {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+}
+
 #container {
     background-size: contain;
     background-repeat: no-repeat;

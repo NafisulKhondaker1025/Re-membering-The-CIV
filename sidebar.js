@@ -34,6 +34,14 @@ AFRAME.registerComponent('populate-sidebar', {
         openbtn.id = 'open'
         main.appendChild(openbtn)
 
+        const donebtn = document.createElement('a')
+        donebtn.setAttribute('href', 'javascript:void(0)')
+        donebtn.onclick = this.done
+        donebtn.innerHTML = "✓ Done"
+        donebtn.className = 'donebtn'
+        donebtn.id = 'done'
+        main.appendChild(donebtn)
+
         function changeColor(value) {
             function pad(num){
                 if (num.length<2) {
@@ -64,6 +72,8 @@ AFRAME.registerComponent('populate-sidebar', {
         document.getElementById('sidebar').style.width = "0";
         document.getElementById('slide').style.display = "block";
         document.getElementById('main').style.display = "block"
+        document.getElementById('open').style.display = "none"
+        document.getElementById('done').style.display = "block"
     },
 
     closeBar: function () {
@@ -74,5 +84,10 @@ AFRAME.registerComponent('populate-sidebar', {
     openBar: function () {
         document.getElementById('sidebar').style.width = "35%";
         document.getElementById('main').style.display = "none"
+    }, 
+
+    done: function () {
+        document.getElementById('done').style.display = "none"
+        document.getElementById('open').style.display = "block"
     } 
 })
