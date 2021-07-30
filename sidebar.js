@@ -7,6 +7,12 @@ AFRAME.registerComponent('populate-sidebar', {
         colorbtn.innerHTML = "Adjust Color"
         colorbtn.onclick = this.openSlider
         sidebar.appendChild(colorbtn)
+        const capturebtn = document.createElement('a')
+        capturebtn.setAttribute('href', 'javascript:void(0)')
+        capturebtn.innerHTML = "Capture"
+        capturebtn.onclick = this.openSlider
+        sidebar.appendChild(capturebtn)
+
         const slider = document.createElement('input')
         slider.className = 'slider'
         slider.id = 'slide'
@@ -89,5 +95,6 @@ AFRAME.registerComponent('populate-sidebar', {
     done: function () {
         document.getElementById('done').style.display = "none"
         document.getElementById('open').style.display = "block"
+        document.getElementById('main').style.display = "none"
     } 
 })
