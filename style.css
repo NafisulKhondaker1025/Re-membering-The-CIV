@@ -37,6 +37,10 @@ body {
   color:  #ffffff;
 }
 
+#sidebar .capturebtn {
+  top: 10%;
+}
+
 .slider {
   position: absolute;
   -webkit-appearance: none;
