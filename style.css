@@ -27,6 +27,10 @@ body {
   transition: 0.3s;
 }
 
+img {
+  object-fit: contain;
+}
+
 #sidebar .closebtn {
   background-color: transparent;
   position: absolute;
