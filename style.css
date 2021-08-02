@@ -29,6 +29,7 @@ img {
 
 #sidebar .closebtn {
   background-color: transparent;
+  text-decoration: none;
   position: absolute;
   top: 0%;
   left: 80%;
