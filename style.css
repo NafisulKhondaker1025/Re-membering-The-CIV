@@ -5,6 +5,7 @@ body {
 #loadBackground {
   background-color: #ffffff;
   background-image: url('assets/CIV_logo.png');
+  background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
 }
