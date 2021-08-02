@@ -6,7 +6,7 @@ body {
   background-color: #ffffff;
   background-image: url('assets/CIV_logo.png');
   background-position: center center;
-  /* background-size: contain; */
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
