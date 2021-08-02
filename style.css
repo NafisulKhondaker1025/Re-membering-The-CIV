@@ -2,6 +2,11 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+#loadBackground {
+  background-color: #ffffff;
+  background-image: url('assets/CIV_logo.png');
+}
+
 #sidebar {
   height: 100%;
   width: 0%;
