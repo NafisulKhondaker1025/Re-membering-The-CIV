@@ -16,14 +16,14 @@ body {
 
 #sidebar a {
   position: absolute;
-  left: 7%;
+  left: 15%;
   top: 8%;
   display: block;
   transition: 0.3s;
 }
 
 img {
-  max-width: 90%;
+  max-width: 78%;
   height: auto;
 }
 
@@ -38,7 +38,7 @@ img {
 }
 
 #sidebar .capturebtn {
-  top: 27%;
+  top: 24%;
 }
 
 .slider {
