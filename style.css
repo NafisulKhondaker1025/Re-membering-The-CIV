@@ -5,6 +5,8 @@ body {
 #loadBackground {
   background-color: #ffffff;
   background-image: url('assets/CIV_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #sidebar {
