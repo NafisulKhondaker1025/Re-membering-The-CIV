@@ -3,7 +3,7 @@ body {
 }
 
 #requestingCameraPermissions {
-  display: none;
+  display: block;
 }
 
 .button-primary-8w {
