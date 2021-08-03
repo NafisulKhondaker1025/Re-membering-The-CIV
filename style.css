@@ -3,7 +3,7 @@ body {
 }
 
 #loadBackground {
-  background-color: #ffffff;
+  background-color: #000;
   background-image: url('assets/CIV_logo_3.png');
   background-position: center center;
   background-size: cover;
