@@ -3,8 +3,7 @@ body {
 }
 
 #requestingCameraPermissions {
-  background-color: transparent;
-  color: transparent;
+  display: none;
 }
 
 #loadBackground {
