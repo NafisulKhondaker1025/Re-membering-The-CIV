@@ -6,9 +6,12 @@ body {
   display: none;
 }
 
+.button-primary-8w {
+  background-color: #0ED5D9;
+}
+
 #loadBackground {
-  background-color: #000;
-  background-image: url('assets/CIV_logo_7.png');
+  background-image: url('assets/CIV_logo.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
