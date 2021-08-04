@@ -23,11 +23,15 @@ body {
 }
 
 #loadBackground {
-  background-color: white !important;
+  background-color: #66EEF1 !important;
   background-image: url('assets/CIV_logo.png');
   background-position: 50% 20%;
   background-repeat: no-repeat;
   background-size: 80%;
+}
+
+.poweredby-img {
+  display: none !important;
 }
 
 #sidebar {
