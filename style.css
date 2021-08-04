@@ -2,9 +2,10 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-/* #requestingCameraIcon {
-  display: none;
-} */
+#requestingCameraIcon {
+  position: absolute;
+  height: 5%;
+}
 
 #requestingCameraPermissions {
   position: absolute;
