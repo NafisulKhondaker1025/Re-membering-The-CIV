@@ -24,9 +24,9 @@ body {
 #loadBackground {
   background-color: white !important;
   background-image: url('assets/CIV_logo.png');
-  background-position: 50% 30%;
+  background-position: 50% 20%;
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 80%;
 }
 
 #sidebar {
