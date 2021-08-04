@@ -1,6 +1,10 @@
 AFRAME.registerComponent('populate-sidebar', {
     init: function () {
 
+        let loadImageContainer = document.getElementById('loadImageContainer')
+        let loadImage = document.getElementById('loadImage')
+        loadImage.setAttribute('src', 'assets/loading.gif')
+
         let download = document.getElementById('downloadButton')
         let downloadImage = download.getElementsByTagName('IMG')[0]
         download.removeChild(downloadImage)
