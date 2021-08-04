@@ -1,6 +1,5 @@
 AFRAME.registerComponent('start-tracking', {
     init: function() {
-    const text = document.getElementById('loadingText')
     const container = document.getElementById('container')
     container.style.backgroundImage = "url('assets/stabilization.gif')"
  
