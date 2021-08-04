@@ -16,9 +16,10 @@ body {
 }
 
 #loadImage {
-  background-size: contain !important;
   top: 80% !important;
   left: 60% !important;
+  width: auto !important;
+  height: auto !important;
 }
 
 #loadBackground {
