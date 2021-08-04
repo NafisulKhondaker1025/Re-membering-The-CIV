@@ -7,8 +7,7 @@ body {
 }
 
 #requestingCameraPermissions {
-  position: absolute;
-  height: 2%;
+  background-color: transparent !important;
 }
 
 .button-primary-8w {
