@@ -15,11 +15,10 @@ body {
   background-color: #0ED5D9;
 }
 
-#loadImage {
-  background-image: none;
+/* #loadImage {
   background-image: url("assets/loading.gif");
   background-repeat: no-repeat;
-}
+} */
 
 #loadBackground {
   background-image: url('assets/CIV_logo.png');
