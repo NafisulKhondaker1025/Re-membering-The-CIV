@@ -8,10 +8,15 @@ body {
 
 #requestingCameraPermissions {
   background-color: transparent !important;
+  color: black;
 }
 
 .button-primary-8w {
   background-color: #0ED5D9;
+}
+
+#loadImage {
+  background-image: url("assets/loading.gif");
 }
 
 #loadBackground {
