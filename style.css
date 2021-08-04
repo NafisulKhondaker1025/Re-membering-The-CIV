@@ -16,8 +16,7 @@ body {
 }
 
 #loadImage {
-  position: absolute !important;
-  top: 70% !important;
+  top: 50% !important;
   left: 50% !important;
 }
 
