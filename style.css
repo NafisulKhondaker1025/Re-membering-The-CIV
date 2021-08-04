@@ -2,13 +2,14 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-#requestingCameraIcon {
+/* #requestingCameraIcon {
   display: none;
-}
-
-/* #requestingCameraPermissions {
-  display: block;
 } */
+
+#requestingCameraPermissions {
+  position: absolute;
+  height: 10%;
+}
 
 .button-primary-8w {
   background-color: #0ED5D9;
