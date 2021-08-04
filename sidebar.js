@@ -1,5 +1,11 @@
 AFRAME.registerComponent('populate-sidebar', {
     init: function () {
+
+        let download = document.getElementById('downloadButton')
+        let downloadImage = download.getElementsByTagName('IMG')[0]
+        download.removeChild(downloadImage)
+        download.innerHTML = "Download"
+
         const sidebar = document.getElementById('sidebar')
         const main = document.getElementById('main')
         const closebtn = document.createElement('a')
