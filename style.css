@@ -5,6 +5,7 @@ body {
 #requestingCameraIcon {
   position: absolute;
   height: 5%;
+  display: none;
 }
 
 #requestingCameraPermissions {
