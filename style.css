@@ -3,14 +3,12 @@ body {
 }
 
 #requestingCameraIcon {
-  position: absolute;
-  height: 5%;
   display: none !important;
 }
 
 #requestingCameraPermissions {
   position: absolute;
-  height: 5%;
+  height: 4%;
 }
 
 .button-primary-8w {
