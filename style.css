@@ -26,7 +26,7 @@ body {
   background-image: url('assets/CIV_logo.png');
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 50% 50%;
 }
 
 #sidebar {
