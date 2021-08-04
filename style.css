@@ -5,6 +5,7 @@ body {
 #downloadButton {
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 20px;
+  font-weight: 1000;
   color: white;
   padding: 1px 2px;
 }
