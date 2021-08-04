@@ -6,9 +6,9 @@ body {
   display: none;
 }
 
-#requestingCameraPermissions {
+/* #requestingCameraPermissions {
   display: block;
-}
+} */
 
 .button-primary-8w {
   background-color: #0ED5D9;
