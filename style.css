@@ -2,6 +2,17 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+#downloadButton {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  color: white;
+  padding: 1px 2px;
+}
+
+#actionButton {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
 #requestingCameraIcon {
   display: none !important;
 }
