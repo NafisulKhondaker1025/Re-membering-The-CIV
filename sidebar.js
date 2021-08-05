@@ -43,12 +43,10 @@ AFRAME.registerComponent('populate-sidebar', {
         
         const container = document.getElementById('container')
         const colorHelp = document.createElement('span')
-        colorHelp.className = 'helpMenu'
         colorHelp.id = 'colHelp'
         colorHelp.innerHTML = '❮❮❮❮ Click to adjust brightness'
         container.appendChild(colorHelp)
         const cameraHelp = document.createElement('span')
-        cameraHelp.className = 'helpMenu'
         cameraHelp.id = 'camHelp'
         cameraHelp.innerHTML = '❮❮❮❮ Click to take photo/video'
         container.appendChild(cameraHelp)
@@ -141,7 +139,7 @@ AFRAME.registerComponent('populate-sidebar', {
         document.getElementById('eng').style.display = 'block'
         document.getElementById('franc').style.display = 'block'
         document.getElementById('eng').style.top = '70%'
-        document.getElementById('franc').style.top = '80%'
+        document.getElementById('franc').style.top = '76%'
         document.getElementById('colHelp').style.display = 'block'
         document.getElementById('camHelp').style.display = 'block'
      },
