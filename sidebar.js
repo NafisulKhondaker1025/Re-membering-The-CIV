@@ -126,7 +126,10 @@ AFRAME.registerComponent('populate-sidebar', {
         document.getElementById('done').style.display = "block"
         document.getElementById('eng').style.top = "90%"
         document.getElementById('franc').style.top = "90%"
-        document.getElementsByClassName('helpMenu').style.display = "none"
+        document.getElementById('eng').style.display = "none"
+        document.getElementById('franc').style.display = "none"
+        document.getElementById('colHelp').style.display = "none"
+        document.getElementById('camHelp').style.display = "none"
      },
 
      openHelp: function () {
@@ -136,6 +139,10 @@ AFRAME.registerComponent('populate-sidebar', {
         document.getElementById('franc').style.top = '80%'
         document.getElementById('colHelp').style.display = 'block'
         document.getElementById('camHelp').style.display = 'block'
+        document.getElementById('eng').style.display = "none"
+        document.getElementById('franc').style.display = "none"
+        document.getElementById('colHelp').style.display = "none"
+        document.getElementById('camHelp').style.display = "none"
      },
 
      showEng: function () {
@@ -163,7 +170,10 @@ AFRAME.registerComponent('populate-sidebar', {
         document.getElementById('main').style.display = "block"
         document.getElementById('eng').style.top = "90%"
         document.getElementById('franc').style.top = "90%"
-        document.getElementsByClassName('helpMenu').style.display = "none"
+        document.getElementById('eng').style.display = "none"
+        document.getElementById('franc').style.display = "none"
+        document.getElementById('colHelp').style.display = "none"
+        document.getElementById('camHelp').style.display = "none"
     },
 
     openBar: function () {
