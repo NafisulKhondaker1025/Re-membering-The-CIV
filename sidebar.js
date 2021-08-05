@@ -40,16 +40,18 @@ AFRAME.registerComponent('populate-sidebar', {
         francbtn.className = 'helpMenu'
         francbtn.id = 'franc'
         sidebar.appendChild(francbtn)
+        
+        const container = document.getElementById('container')
         const colorHelp = document.createElement('span')
         colorHelp.className = 'helpMenu'
         colorHelp.id = 'colHelp'
         colorHelp.innerHTML = '❮❮❮❮ Click to adjust brightness'
-        sidebar.appendChild(colorHelp)
+        container.appendChild(colorHelp)
         const cameraHelp = document.createElement('span')
         cameraHelp.className = 'helpMenu'
         cameraHelp.id = 'camHelp'
         cameraHelp.innerHTML = '❮❮❮❮ Click to take photo/video'
-        sidebar.appendChild(cameraHelp)
+        container.appendChild(cameraHelp)
 
         const slider = document.createElement('input')
         slider.className = 'slider'
@@ -150,7 +152,7 @@ AFRAME.registerComponent('populate-sidebar', {
      },
 
      showFranc: function () {
-        colorHelp.innerHTML = '❮❮❮❮ Click '
+        colHelp.innerHTML = '❮❮❮❮ Click '
         cameraHelp.innerHTML = '❮❮❮❮ Click '
      },
  

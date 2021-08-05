@@ -91,11 +91,13 @@ img {
 }
 
 #colHelp {
-  display: none;
+  left: 60%;
+  top: 10%;
 }
 
 #camHelp {
-  display: none;
+  left: 60%;
+  top: 50%;
 }
 
 #sidebar .closebtn {
@@ -201,4 +203,12 @@ img {
     transform: translate(-50%, 0);
     z-index: 10;
     display: block;
+  }
+
+  #container span {
+    color: white;
+    position: absolute;
+    font-size: 10px;
+    font-weight: 1000;
+    display: none;
   }
