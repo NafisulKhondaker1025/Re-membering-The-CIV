@@ -60,7 +60,7 @@ body {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  overflow-x: hidden;
+  overflow-x: visible;
   transition: 0.5s;
 }
 
@@ -77,6 +77,26 @@ img {
   height: auto;
 }
 
+#eng {
+  position: absolute;
+  display: none;
+  top: 90%
+}
+
+#franc {
+  position: absolute;
+  display: none;
+  top: 90%
+}
+
+#colHelp {
+  display: none;
+}
+
+#camHelp {
+  display: none;
+}
+
 #sidebar .closebtn {
   background-color: transparent;
   text-decoration: none;
@@ -90,6 +110,10 @@ img {
 
 #sidebar .capturebtn {
   top: 24%;
+}
+
+#sidebar #help {
+  top: 50;
 }
 
 .slider {

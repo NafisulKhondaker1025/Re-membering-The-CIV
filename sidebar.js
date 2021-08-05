@@ -20,6 +20,34 @@ AFRAME.registerComponent('populate-sidebar', {
         capturebtn.onclick = this.openCapture
         capturebtn.className = 'capturebtn'
         sidebar.appendChild(capturebtn)
+        const helpbtn = document.createElement('a')
+        helpbtn.setAttribute('href', 'javascript:void(0)')
+        helpbtn.innerHTML = '<img id="cameraimg" src="assets/help.png">'
+        helpbtn.onclick = this.openHelp
+        helpbtn.id = 'help'
+        sidebar.appendChild(helpbtn)
+        const engbtn = document.createElement('a')
+        engbtn.setAttribute('href', 'javascript:void(0)')
+        engbtn.innerHTML = 'English'
+        engbtn.onclick = this.showEng
+        engbtn.className = 'helpMenu'
+        engbtn.id = 'eng'
+        sidebar.appendChild(engbtn)
+        const francbtn = document.createElement('a')
+        francbtn.setAttribute('href', 'javascript:void(0)')
+        francbtn.innerHTML = 'Français'
+        francbtn.onclick = this.showFranc
+        francbtn.className = 'helpMenu'
+        francbtn.id = 'franc'
+        sidebar.appendChild(francbtn)
+        const colorHelp = document.createElement('span')
+        colorHelp.className = 'helpMenu'
+        colorHelp.id = 'colHelp'
+        sidebar.appendChild(colorHelp)
+        const cameraHelp = document.createElement('span')
+        cameraHelp.className = 'helpMenu'
+        cameraHelp.id = 'camHelp'
+        sidebar.appendChild(cameraHelp)
 
         const slider = document.createElement('input')
         slider.className = 'slider'
@@ -30,7 +58,6 @@ AFRAME.registerComponent('populate-sidebar', {
         slider.setAttribute('value', '255')
         main.appendChild(slider)
         slider.style.display = "none"
-
         const openbtn = document.createElement('a')
         openbtn.setAttribute('href', 'javascript:void(0)')
         openbtn.onclick = this.openBar
@@ -80,6 +107,9 @@ AFRAME.registerComponent('populate-sidebar', {
         document.getElementById('main').style.display = "block"
         document.getElementById('open').style.display = "none"
         document.getElementById('done').style.display = "block"
+        document.getElementById('eng').style.top = "90%"
+        document.getElementById('franc').style.top = "90%"
+        document.getElementsByClassName('helpMenu').style.display = "none"
     },
 
     openCapture: function () {
@@ -92,6 +122,26 @@ AFRAME.registerComponent('populate-sidebar', {
         document.getElementById('main').style.display = "block"
         document.getElementById('open').style.display = "none"
         document.getElementById('done').style.display = "block"
+        document.getElementById('eng').style.top = "90%"
+        document.getElementById('franc').style.top = "90%"
+        document.getElementsByClassName('helpMenu').style.display = "none"
+     },
+
+     openHelp: function () {
+        document.getElementById('eng').style.top = '70%'
+        document.getElementById('franc').style.top = '80%'
+        document.getElementById('colHelp').style.display = 'block'
+        document.getElementById('camHelp').style.display = 'block'
+     },
+
+     showEng: function () {
+        colorHelp.innerHTML = '❮❮❮❮ Click to adjust brightness'
+        cameraHelp.innerHTML = '❮❮❮❮ Click to take photo/video'
+     },
+
+     showFranc: function () {
+        colorHelp.innerHTML = '❮❮❮❮ Click '
+        cameraHelp.innerHTML = '❮❮❮❮ Click '
      },
  
      done: function () {
@@ -107,6 +157,9 @@ AFRAME.registerComponent('populate-sidebar', {
     closeBar: function () {
         document.getElementById('sidebar').style.width = "0";
         document.getElementById('main').style.display = "block"
+        document.getElementById('eng').style.top = "90%"
+        document.getElementById('franc').style.top = "90%"
+        document.getElementsByClassName('helpMenu').style.display = "none"
     },
 
     openBar: function () {
