@@ -128,6 +128,8 @@ AFRAME.registerComponent('populate-sidebar', {
      },
 
      openHelp: function () {
+        document.getElementById('eng').style.display = 'block'
+        document.getElementById('eng').style.display = 'block'
         document.getElementById('eng').style.top = '70%'
         document.getElementById('franc').style.top = '80%'
         document.getElementById('colHelp').style.display = 'block'

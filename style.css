@@ -76,12 +76,14 @@ img {
 #eng {
   position: absolute;
   display: none;
+  text-decoration: none;
   top: 90%
 }
 
 #franc {
   position: absolute;
   display: none;
+  text-decoration: none;
   top: 90%
 }
 
