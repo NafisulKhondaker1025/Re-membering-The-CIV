@@ -4,15 +4,16 @@ body {
 
 #downloadButton {
   background-color: rgba(0, 0, 0, 0.5);
-  font-size: 20px;
+  font-size: 5vmin;
   font-weight: 1000;
   color: white;
-  padding: 9px;
-  border-radius: 10px
+  padding: 0.3em 0.6em 0.3em 0.6em;
+  border-radius: 0.5em
 }
 
 #actionButton {
   background-color: rgba(0, 0, 0, 0.5) !important;
+  font-weight: 1000;
 }
 
 #requestingCameraIcon {
@@ -135,28 +136,29 @@ img {
   position: absolute;
   top: 1%;
   left: 1%;
-  font-size: 170%;
+  font-size: 7vmin;
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
   color: white;
-  padding: 10px 10px;
+  padding: 0.3em 0.3em 0.3em 0.3em;
   border: none;
 }
 
 .donebtn {
   position: absolute;
   top: 2%;
-  left: 77%;
-  font-size: 20px;
+  right: 3%;
+  font-size: 5vmin;
   font-weight: 1000;
   text-decoration: none;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 8px;
+  padding: 0.3em 0.5em 0.3em 0.5em;
   border: none;
-  border-radius: 10px;
+  max-width: 3.25em;
+  border-radius: 1.5em;
 }
 
 #container {
