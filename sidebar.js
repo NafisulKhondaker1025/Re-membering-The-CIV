@@ -43,10 +43,12 @@ AFRAME.registerComponent('populate-sidebar', {
         const colorHelp = document.createElement('span')
         colorHelp.className = 'helpMenu'
         colorHelp.id = 'colHelp'
+        colorHelp.innerHTML = '❮❮❮❮ Click to adjust brightness'
         sidebar.appendChild(colorHelp)
         const cameraHelp = document.createElement('span')
         cameraHelp.className = 'helpMenu'
         cameraHelp.id = 'camHelp'
+        cameraHelp.innerHTML = '❮❮❮❮ Click to take photo/video'
         sidebar.appendChild(cameraHelp)
 
         const slider = document.createElement('input')
@@ -137,8 +139,8 @@ AFRAME.registerComponent('populate-sidebar', {
      },
 
      showEng: function () {
-        colorHelp.innerHTML = '❮❮❮❮ Click to adjust brightness'
-        cameraHelp.innerHTML = '❮❮❮❮ Click to take photo/video'
+        document.getElementById('colHelp').innerHTML = '❮❮❮❮ Click to adjust brightness'
+        document.getElementById('colHelp').innerHTML = '❮❮❮❮ Click to take photo/video'
      },
 
      showFranc: function () {
