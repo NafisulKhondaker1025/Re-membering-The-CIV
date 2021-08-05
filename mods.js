@@ -3,7 +3,7 @@ AFRAME.registerComponent('mods', {
     init: function () {
 
         let prompt = document.getElementById('requestingCameraPermissions')
-        prompt.innerHTML = 'tap "Allow" to launch<br>robinet "Autoriser" pour lancer'
+        prompt.innerHTML = 'press "Allow" to launch<br>appuyez "Autoriser" pour lancer'
 
         let download = document.getElementById('downloadButton')
         let downloadImage = download.getElementsByTagName('IMG')[0]
