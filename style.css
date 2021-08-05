@@ -65,6 +65,10 @@ body {
 }
 
 #sidebar a {
+  position: absolute;
+  left: 15%;
+  top: 8%;
+  display: block;
   transition: 0.3s;
 }
 
