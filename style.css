@@ -65,10 +65,6 @@ body {
 }
 
 #sidebar a {
-  position: absolute;
-  left: 15%;
-  top: 8%;
-  display: block;
   transition: 0.3s;
 }
 
@@ -113,7 +109,8 @@ img {
 }
 
 #sidebar #help {
-  top: 50;
+  position: absolute;
+  top: 83%;
 }
 
 .slider {
