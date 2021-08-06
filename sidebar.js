@@ -30,14 +30,12 @@ AFRAME.registerComponent('populate-sidebar', {
         engbtn.setAttribute('href', 'javascript:void(0)')
         engbtn.innerHTML = 'English'
         engbtn.onclick = this.showEng
-        engbtn.className = 'helpMenu'
         engbtn.id = 'eng'
         sidebar.appendChild(engbtn)
         const francbtn = document.createElement('a')
         francbtn.setAttribute('href', 'javascript:void(0)')
         francbtn.innerHTML = 'Français'
         francbtn.onclick = this.showFranc
-        francbtn.className = 'helpMenu'
         francbtn.id = 'franc'
         sidebar.appendChild(francbtn)
         
@@ -65,7 +63,7 @@ AFRAME.registerComponent('populate-sidebar', {
         openbtn.onclick = this.openBar
         openbtn.innerHTML = "☰"
         openbtn.className = 'openbtn'
-        openbtn.id = 'open'
+        openbtn.id = 'openb'
         main.appendChild(openbtn)
 
         const donebtn = document.createElement('a')
@@ -104,17 +102,15 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     openSlider: function () {
-        document.getElementById('sidebar').style.width = "0";
-        document.getElementById('slide').style.display = "block";
-        document.getElementById('main').style.display = "block"
-        document.getElementById('open').style.display = "none"
-        document.getElementById('done').style.display = "block"
-        document.getElementById('eng').style.top = "90%"
-        document.getElementById('franc').style.top = "90%"
-        document.getElementById('eng').style.display = "none"
-        document.getElementById('franc').style.display = "none"
-        document.getElementById('colHelp').style.display = "none"
-        document.getElementById('camHelp').style.display = "none"
+        sidebar.style.width = "0";
+        slide.style.display = "block";
+        main.style.display = "block"
+        openb.style.display = "none"
+        done.style.display = "block"
+        eng.style.top = "110%"
+        franc.style.top = "110%"
+        colHelp.style.display = "none"
+        camHelp.style.display = "none"
     },
 
     openCapture: function () {
@@ -123,16 +119,14 @@ AFRAME.registerComponent('populate-sidebar', {
         capture.setAttribute('capture-mode', 'standard')
         capture.id = 'capbtn'
         scene.appendChild(capture)
-        document.getElementById('sidebar').style.width = "0";
-        document.getElementById('main').style.display = "block"
-        document.getElementById('open').style.display = "none"
-        document.getElementById('done').style.display = "block"
-        document.getElementById('eng').style.top = "90%"
-        document.getElementById('franc').style.top = "90%"
-        document.getElementById('eng').style.display = "none"
-        document.getElementById('franc').style.display = "none"
-        document.getElementById('colHelp').style.display = "none"
-        document.getElementById('camHelp').style.display = "none"
+        sidebar.style.width = "0";
+        main.style.display = "block"
+        openb.style.display = "none"
+        done.style.display = "block"
+        eng.style.top = "110%"
+        franc.style.top = "110%"
+        colHelp.style.display = "none"
+        camHelp.style.display = "none"
      },
 
      openHelp: function () {
@@ -146,12 +140,12 @@ AFRAME.registerComponent('populate-sidebar', {
 
      showEng: function () {
         document.getElementById('colHelp').innerHTML = '❮❮❮❮ Click to adjust brightness'
-        document.getElementById('colHelp').innerHTML = '❮❮❮❮ Click to take photo/video'
+        document.getElementById('camHelp').innerHTML = '❮❮❮❮ Click to take photo/video'
      },
 
      showFranc: function () {
         colHelp.innerHTML = '❮❮❮❮ Click '
-        cameraHelp.innerHTML = '❮❮❮❮ Click '
+        camHelp.innerHTML = '❮❮❮❮ Click '
      },
  
      done: function () {
