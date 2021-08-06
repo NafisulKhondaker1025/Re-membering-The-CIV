@@ -117,6 +117,7 @@ AFRAME.registerComponent('populate-sidebar', {
         sidebar.style.width = "0";
         slide.style.display = "block";
         sliderHelp.style.display = "block"
+        textcont.style.display = "block"
         main.style.display = "block"
         openb.style.display = "none"
         done.style.display = "block"
@@ -132,6 +133,7 @@ AFRAME.registerComponent('populate-sidebar', {
         capture.setAttribute('capture-mode', 'standard')
         capture.id = 'capbtn'
         scene.appendChild(capture)
+        textcont.style.display = "block"
         imgvid.style.display = "block"
         sidebar.style.width = "0";
         main.style.display = "block"
@@ -156,6 +158,7 @@ AFRAME.registerComponent('populate-sidebar', {
         imgvid.innerHTML = 'Click to take a photo, Press and hold for video'
         sliderHelp.innerHTML = 'Move slider to adjust saturation of model'
         done.innerHTML = '✓ Done'
+        document.getElementById('downloadButton').innerHTML = 'Download'
      },
 
      showFranc: function () {
@@ -164,6 +167,7 @@ AFRAME.registerComponent('populate-sidebar', {
         imgvid.innerHTML = 'Cliquez á prendre une photo, appuyer et maintenir pour la vidéo'
         sliderHelp.innerHTML = 'Déplacer le curseur pour ajuster la saturation du modèle'
         done.innerHTML = '✓ Fini'
+        document.getElementById('downloadButton').innerHTML = 'Télécharger'
      },
  
      done: function () {

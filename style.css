@@ -247,6 +247,7 @@ img {
     height: 22%;
     width: 100%;
     bottom: 0%;
+    display: none
   }
 
   #container span {
