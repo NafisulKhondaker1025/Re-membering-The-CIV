@@ -14,7 +14,7 @@ body {
 #actionButton {
   background-color: rgba(0, 0, 0, 0.5) !important;
   font-weight: 1000;
-  display: none;
+  /* display: none; */
 }
 
 #requestingCameraIcon {
@@ -119,14 +119,14 @@ img {
 }
 
 #imgvid {
-  bottom: 68%;
+  top: 8%;
   left: 0%;
   width: 100%;
   text-align: center;
 }
 
 #sliderHelp {
-  bottom: 68%;
+  top: 8%;
   left: 0%;
   width: 100%;
   text-align: center;
