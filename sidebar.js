@@ -49,6 +49,14 @@ AFRAME.registerComponent('populate-sidebar', {
         cameraHelp.id = 'camHelp'
         cameraHelp.innerHTML = '❮❮❮❮ Click to take photo/video'
         container.appendChild(cameraHelp)
+        const imgvid = document.createElement('span')
+        imgvid.id = 'imgvid'
+        imgvid.innerHTML = 'Click to take photo/Press and hold for video'
+        container.appendChild(imgvid)
+        const sliderHelp = document.createElement('span')
+        sliderHelp.id = 'sliderHelp'
+        sliderHelp.innerHTML = 'Move slider to adjust saturation of model'
+        container.appendChild(sliderHelp)
 
         const slider = document.createElement('input')
         slider.className = 'slider'
@@ -105,6 +113,7 @@ AFRAME.registerComponent('populate-sidebar', {
     openSlider: function () {
         sidebar.style.width = "0";
         slide.style.display = "block";
+        sliderHelp.style.display = "block"
         main.style.display = "block"
         openb.style.display = "none"
         done.style.display = "block"
@@ -120,6 +129,7 @@ AFRAME.registerComponent('populate-sidebar', {
         capture.setAttribute('capture-mode', 'standard')
         capture.id = 'capbtn'
         scene.appendChild(capture)
+        imgvid.style.display = "block"
         sidebar.style.width = "0";
         main.style.display = "block"
         openb.style.display = "none"
@@ -140,17 +150,23 @@ AFRAME.registerComponent('populate-sidebar', {
      showEng: function () {
         colHelp.innerHTML = '❮❮❮❮ Click to adjust brightness'
         camHelp.innerHTML = '❮❮❮❮ Click to take photo/video'
+        imgvid.innerHTML = 'Click to take photo/Press and hold for video'
+        sliderHelp.innerHTML = 'Move slider to adjust saturation of model'
      },
 
      showFranc: function () {
         colHelp.innerHTML = '❮❮❮❮ Click '
         camHelp.innerHTML = '❮❮❮❮ Click '
+        imgvid.innerHTML = 'Click to take '
+        sliderHelp.innerHTML = 'Move slider '
      },
  
      done: function () {
          done.style.display = "none"
          openb.style.display = "block"
          slide.style.display = "none"
+         sliderHelp.style.display = "none"
+         imgvid.style.display = "none"
          let capture = capbtn
          if (capture) {
             capture.remove()

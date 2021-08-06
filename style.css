@@ -58,6 +58,7 @@ body {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   overflow-x: hidden;
+  overflow-y: hidden;
   transition: 0.5s;
 }
 
@@ -110,6 +111,18 @@ img {
 #camHelp {
   left: 35%;
   top: 56%;
+}
+
+#imgvid {
+  top: 10%;
+  left: 5%;
+  text-align: center;
+}
+
+#sliderHelp {
+  top: 10%;
+  left: 5%;
+  text-align: center;
 }
 
 #sidebar .closebtn {
