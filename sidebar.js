@@ -130,8 +130,8 @@ AFRAME.registerComponent('populate-sidebar', {
      },
 
      openHelp: function () {
-        eng.style.top = '70%'
-        franc.style.top = '76%'
+        eng.style.top = '65%'
+        franc.style.top = '74%'
         colHelp.style.display = 'block'
         camHelp.style.display = 'block'
      },
