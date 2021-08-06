@@ -77,15 +77,14 @@ img {
 #eng {
   text-decoration: none;
   top: 110%;
-  left: 8% !important;
+  left: 13% !important;
   font-size: 5vmin;
   font-weight: 1000;
   cursor: pointer;
-  text-align: center;
   color: white;
-  padding: 0.3em 1.25em 0.3em 0.75em;
+  padding: 0.3em 0.7em 0.3em 0.7em;
   border: solid white 0.1em;
-  max-width: 4.25em;
+  max-width: 3.25em;
   min-width: 2.25em;
   border-radius: 1.5em;
 }
@@ -93,13 +92,12 @@ img {
 #franc {
   text-decoration: none;
   top: 110%;
-  left: 8% !important;
+  left: 13% !important;
   font-size: 5vmin;
   font-weight: 1000;
   cursor: pointer;
-  text-align: center;
   color: white;
-  padding: 0.3em 1.25em 0.3em 0.75em;
+  padding: 0.3em 1.0em 0.3em 0.5em;
   border: solid white 0.1em;
   max-width: 3.25em;
   min-width: 2.25em;
@@ -220,7 +218,6 @@ img {
   font-size: 5vmin;
   font-weight: 1000;
   text-decoration: none;
-  text-align: center;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
