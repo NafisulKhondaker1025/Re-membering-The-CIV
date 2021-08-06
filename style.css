@@ -33,17 +33,14 @@ body {
 
 #loadImage {
   top: 80% !important;
-  left: 60% !important;
-  width: auto !important;
-  height: auto !important;
 }
 
 #loadBackground {
   background-color: white !important;
   background-image: url('assets/CIV_logo.png');
-  background-position: 50% 20%;
+  background-position: 50% 30%;
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 95%;
 }
 
 .poweredby-img {
@@ -78,9 +75,8 @@ img {
 
 #eng {
   position: absolute;
-  display: none;
   text-decoration: none;
-  top: 90%;
+  top: 110%;
   left: 26%;
   font-size: 5vmin;
   font-weight: 1000;
@@ -95,9 +91,8 @@ img {
 
 #franc {
   position: absolute;
-  display: none;
   text-decoration: none;
-  top: 90%;
+  top: 110%;
   left: 26%;
   font-size: 5vmin;
   font-weight: 1000;

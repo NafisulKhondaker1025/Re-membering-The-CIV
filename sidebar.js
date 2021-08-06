@@ -150,8 +150,9 @@ AFRAME.registerComponent('populate-sidebar', {
          done.style.display = "none"
          openb.style.display = "block"
          slide.style.display = "none"
-         if (capbtn) {
-            capbtn.remove()
+         let capture = capbtn
+         if (capture) {
+            capture.remove()
          }
      }, 
 
