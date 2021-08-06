@@ -43,20 +43,22 @@
         <img id="loading" src="assets/loading.gif">
       </a-assets>
 
-      <!-- <xrextras-capture-button id="capbtn" capture-mode="standard" visible="false"></xrextras-capture-button> -->
+      <div id="mediarec">
+        <xrextras-capture-button capture-mode="standard" visible="false"></xrextras-capture-button>
 
-      <xrextras-capture-config
-        max-duration-ms="120000"
-        max-dimension="1280"
-        enable-end-card="false"
-        file-name-prefix="remembering-the-civ-"
-      ></xrextras-capture-config>
+        <xrextras-capture-config
+          max-duration-ms="120000"
+          max-dimension="1280"
+          enable-end-card="false"
+          file-name-prefix="remembering-the-civ-"
+        ></xrextras-capture-config>
 
-      <xrextras-capture-preview
-        action-button-share-text="Share"
-        action-button-view-text="View"
-        finalize-text="Exporting..."
-      ></xrextras-capture-preview>
+        <xrextras-capture-preview
+          action-button-share-text="Share"
+          action-button-view-text="View"
+          finalize-text="Exporting..."
+        ></xrextras-capture-preview>
+    </div>
 
       <a-camera
         id="camera"

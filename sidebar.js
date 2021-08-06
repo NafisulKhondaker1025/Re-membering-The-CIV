@@ -2,6 +2,10 @@ AFRAME.registerComponent('populate-sidebar', {
     init: function () {
         const sidebar = document.getElementById('sidebar')
         const main = document.getElementById('main')
+
+        const download = document.getElementById('downloadButton')
+        download.innerHTML = 'Download'
+
         const closebtn = document.createElement('a')
         closebtn.innerHTML = "x"
         closebtn.setAttribute('href', 'javascript:void(0)')
@@ -128,11 +132,7 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     openCapture: function () {
-        const scene = document.getElementById('scene')
-        const capture = document.createElement('xrextras-capture-button')
-        capture.setAttribute('capture-mode', 'standard')
-        capture.id = 'capbtn'
-        scene.appendChild(capture)
+        document.getElementById('mediarec').style.display = "block"
         textcont.style.display = "block"
         imgvid.style.display = "block"
         sidebar.style.width = "0";
@@ -177,10 +177,7 @@ AFRAME.registerComponent('populate-sidebar', {
          sliderHelp.style.display = "none"
          imgvid.style.display = "none"
          textcont.style.display = "none"
-         let capture = document.getElementById('capbtn')
-         if (capture) {
-            capture.remove()
-         }
+         document.getElementById('mediarec').style.display = "none"
      }, 
 
     closeBar: function () {
