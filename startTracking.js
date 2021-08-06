@@ -8,7 +8,7 @@ AFRAME.registerComponent('start-tracking', {
       CIV.id = 'model'
       CIV.setAttribute('gltf-model', '#3dmodel')
       this.el.sceneEl.appendChild(CIV) 
-      CIV.setAttribute('position', '0 0 -5')
+      CIV.setAttribute('position', '0 0 -7')
       CIV.setAttribute('rotation', '0 225 0')
       CIV.setAttribute('scale', '1 1 1')
       CIV.setAttribute('visible', 'true')
