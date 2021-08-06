@@ -12,7 +12,6 @@ AFRAME.registerComponent('start-tracking', {
       CIV.setAttribute('rotation', '0 225 0')
       CIV.setAttribute('scale', '1 1 1')
       CIV.setAttribute('visible', 'true')
-      //text.setAttribute('visible', 'false')
       container.style.backgroundImage = "none"
     }, 15000)
   }

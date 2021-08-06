@@ -81,7 +81,7 @@ AFRAME.registerComponent('populate-sidebar', {
         const donebtn = document.createElement('a')
         donebtn.setAttribute('href', 'javascript:void(0)')
         donebtn.onclick = this.done
-        donebtn.innerHTML = '✓ Done'
+        donebtn.innerHTML = 'Done'
         donebtn.className = 'donebtn'
         donebtn.id = 'done'
         donebtn.style.display = "none"
@@ -157,7 +157,7 @@ AFRAME.registerComponent('populate-sidebar', {
         camHelp.innerHTML = '❮❮❮❮ Click to take a photo/video'
         imgvid.innerHTML = 'Click to take a photo, Press and hold for video'
         sliderHelp.innerHTML = 'Move slider to adjust saturation of model'
-        done.innerHTML = '✓ Done'
+        done.innerHTML = 'Done'
         document.getElementById('downloadButton').innerHTML = 'Download'
      },
 
@@ -166,7 +166,7 @@ AFRAME.registerComponent('populate-sidebar', {
         camHelp.innerHTML = '❮❮❮❮ Cliquez á prendre une photo/vidéo'
         imgvid.innerHTML = 'Cliquez á prendre une photo, appuyer et maintenir pour la vidéo'
         sliderHelp.innerHTML = 'Déplacer le curseur pour ajuster la saturation du modèle'
-        done.innerHTML = '✓ Fini'
+        done.innerHTML = 'Fini'
         document.getElementById('downloadButton').innerHTML = 'Télécharger'
      },
  
