@@ -84,10 +84,10 @@ AFRAME.registerComponent('populate-sidebar', {
                     return num
                 }    
             }
-            var hexColor = parseInt(value, 10).toString(16)
+            let hexColor = parseInt(value, 10).toString(16)
             hexColor = pad(hexColor)
             hexColor = "#" + hexColor + hexColor + hexColor
-            var mesh = document.getElementById('model').getObject3D('mesh');
+            let mesh = document.getElementById('model').getObject3D('mesh');
             if (!mesh) { return; }
             mesh.traverse((node) => {
                 if (node.isMesh) {
@@ -130,17 +130,15 @@ AFRAME.registerComponent('populate-sidebar', {
      },
 
      openHelp: function () {
-        document.getElementById('eng').style.display = 'block'
-        document.getElementById('franc').style.display = 'block'
-        document.getElementById('eng').style.top = '70%'
-        document.getElementById('franc').style.top = '76%'
-        document.getElementById('colHelp').style.display = 'block'
-        document.getElementById('camHelp').style.display = 'block'
+        eng.style.top = '70%'
+        franc.style.top = '76%'
+        colHelp.style.display = 'block'
+        camHelp.style.display = 'block'
      },
 
      showEng: function () {
-        document.getElementById('colHelp').innerHTML = '❮❮❮❮ Click to adjust brightness'
-        document.getElementById('camHelp').innerHTML = '❮❮❮❮ Click to take photo/video'
+        colHelp.innerHTML = '❮❮❮❮ Click to adjust brightness'
+        camHelp.innerHTML = '❮❮❮❮ Click to take photo/video'
      },
 
      showFranc: function () {
@@ -149,28 +147,25 @@ AFRAME.registerComponent('populate-sidebar', {
      },
  
      done: function () {
-         document.getElementById('done').style.display = "none"
-         document.getElementById('open').style.display = "block"
-         document.getElementById('slide').style.display = "none"
-         let capture = document.getElementById('capbtn')
-         if (capture) {
-            capture.remove()
+         done.style.display = "none"
+         openb.style.display = "block"
+         slide.style.display = "none"
+         if (capbtn) {
+            capbtn.remove()
          }
      }, 
 
     closeBar: function () {
-        document.getElementById('sidebar').style.width = "0";
-        document.getElementById('main').style.display = "block"
-        document.getElementById('eng').style.top = "90%"
-        document.getElementById('franc').style.top = "90%"
-        document.getElementById('eng').style.display = "none"
-        document.getElementById('franc').style.display = "none"
-        document.getElementById('colHelp').style.display = "none"
-        document.getElementById('camHelp').style.display = "none"
+        sidebar.style.width = "0";
+        main.style.display = "block"
+        eng.style.top = "110%"
+        franc.style.top = "110%"
+        colHelp.style.display = "none"
+        camHelp.style.display = "none"
     },
 
     openBar: function () {
-        document.getElementById('sidebar').style.width = "35%";
-        document.getElementById('main').style.display = "none"
+        sidebar.style.width = "35%";
+        main.style.display = "none"
     } 
 })
