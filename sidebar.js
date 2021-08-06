@@ -132,7 +132,7 @@ AFRAME.registerComponent('populate-sidebar', {
     },
 
     openCapture: function () {
-        document.getElementById('mediarec').style.display = "block"
+        document.getElementById('recorder').style.display = "block"
         textcont.style.display = "block"
         imgvid.style.display = "block"
         sidebar.style.width = "0";
@@ -177,7 +177,7 @@ AFRAME.registerComponent('populate-sidebar', {
          sliderHelp.style.display = "none"
          imgvid.style.display = "none"
          textcont.style.display = "none"
-         document.getElementById('mediarec').style.display = "none"
+         document.getElementById('recorder').style.display = "none"
      }, 
 
     closeBar: function () {
