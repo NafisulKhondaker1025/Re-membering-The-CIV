@@ -3,7 +3,11 @@ body {
 }
 
 #recorder-button {
-  top: 5% !important;
+  top: -21% !important;
+}
+
+.progress-container {
+  top: -21% !important;
 }
 
 #downloadButton {
@@ -118,14 +122,22 @@ img {
 }
 
 #imgvid {
-  top: 10%;
-  left: 5%;
+  bottom: -95%;
+  left: -3%;
+  height: 8%;
+  width: 107%;
+  background-color: rgb(0.5, 0.5, 0.5, 0.5);
+  padding-top: 6.5em;
   text-align: center;
 }
 
 #sliderHelp {
-  top: 10%;
-  left: 5%;
+  bottom: -95%;
+  left: -3%;
+  height: 8%;
+  width: 107%;
+  background-color: rgb(0.5, 0.5, 0.5, 0.5);
+  padding-top: 6.0em;
   text-align: center;
 }
 

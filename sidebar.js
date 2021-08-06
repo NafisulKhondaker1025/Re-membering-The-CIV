@@ -43,7 +43,7 @@ AFRAME.registerComponent('populate-sidebar', {
         const container = document.getElementById('container')
         const colorHelp = document.createElement('span')
         colorHelp.id = 'colHelp'
-        colorHelp.innerHTML = '❮❮❮❮ Click to adjust brightness'
+        colorHelp.innerHTML = '❮❮❮❮ Click to adjust saturation'
         container.appendChild(colorHelp)
         const cameraHelp = document.createElement('span')
         cameraHelp.id = 'camHelp'
@@ -51,7 +51,7 @@ AFRAME.registerComponent('populate-sidebar', {
         container.appendChild(cameraHelp)
         const imgvid = document.createElement('span')
         imgvid.id = 'imgvid'
-        imgvid.innerHTML = 'Click to take photo/Press and hold for video'
+        imgvid.innerHTML = 'Click to take a photo/Press and hold for video'
         container.appendChild(imgvid)
         const sliderHelp = document.createElement('span')
         sliderHelp.id = 'sliderHelp'
@@ -78,7 +78,7 @@ AFRAME.registerComponent('populate-sidebar', {
         const donebtn = document.createElement('a')
         donebtn.setAttribute('href', 'javascript:void(0)')
         donebtn.onclick = this.done
-        donebtn.innerHTML = "✓ Done"
+        donebtn.innerHTML = '✓ Done'
         donebtn.className = 'donebtn'
         donebtn.id = 'done'
         donebtn.style.display = "none"
@@ -148,17 +148,19 @@ AFRAME.registerComponent('populate-sidebar', {
      },
 
      showEng: function () {
-        colHelp.innerHTML = '❮❮❮❮ Click to adjust brightness'
-        camHelp.innerHTML = '❮❮❮❮ Click to take photo/video'
-        imgvid.innerHTML = 'Click to take photo/Press and hold for video'
+        colHelp.innerHTML = '❮❮❮❮ Click to adjust saturation'
+        camHelp.innerHTML = '❮❮❮❮ Click to take a photo/video'
+        imgvid.innerHTML = 'Click to take a photo, Press and hold for video'
         sliderHelp.innerHTML = 'Move slider to adjust saturation of model'
+        done.innerHTML = '✓ Done'
      },
 
      showFranc: function () {
-        colHelp.innerHTML = '❮❮❮❮ Click '
-        camHelp.innerHTML = '❮❮❮❮ Click '
-        imgvid.innerHTML = 'Click to take '
-        sliderHelp.innerHTML = 'Move slider '
+        colHelp.innerHTML = '❮❮❮❮ Cliquez á régler la saturation'
+        camHelp.innerHTML = '❮❮❮❮ Cliquez á prendre une photo/vidéo'
+        imgvid.innerHTML = 'Cliquez á prendre une photo, appuyer et maintenir pour la vidéo'
+        sliderHelp.innerHTML = 'Déplacer le curseur pour ajuster la saturation du modèle'
+        done.innerHTML = '✓ Fini'
      },
  
      done: function () {
@@ -167,7 +169,7 @@ AFRAME.registerComponent('populate-sidebar', {
          slide.style.display = "none"
          sliderHelp.style.display = "none"
          imgvid.style.display = "none"
-         let capture = capbtn
+         let capture = document.getElementById('capbtn')
          if (capture) {
             capture.remove()
          }
