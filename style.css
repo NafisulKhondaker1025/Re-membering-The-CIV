@@ -2,8 +2,8 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-#capbtn {
-  top: 5%;
+#recorder-button {
+  top: 5% !important;
 }
 
 #downloadButton {
