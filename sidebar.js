@@ -172,6 +172,7 @@ AFRAME.registerComponent('populate-sidebar', {
          slide.style.display = "none"
          sliderHelp.style.display = "none"
          imgvid.style.display = "none"
+         textcont.style.display = "none"
          let capture = document.getElementById('capbtn')
          if (capture) {
             capture.remove()
