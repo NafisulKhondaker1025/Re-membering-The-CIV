@@ -13,6 +13,7 @@ AFRAME.registerComponent('populate-sidebar', {
         colorbtn.setAttribute('href', 'javascript:void(0)')
         colorbtn.innerHTML = '<img id="colorimg" src="assets/color.png">'
         colorbtn.onclick = this.openSlider
+        colorbtn.className = 'colorbtn'
         sidebar.appendChild(colorbtn)
         const capturebtn = document.createElement('a')
         capturebtn.setAttribute('href', 'javascript:void(0)')
