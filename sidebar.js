@@ -49,14 +49,17 @@ AFRAME.registerComponent('populate-sidebar', {
         cameraHelp.id = 'camHelp'
         cameraHelp.innerHTML = '❮❮❮❮ Click to take photo/video'
         container.appendChild(cameraHelp)
+        const textCont = document.createElement('div')
+        textCont.id = 'textcont'
+        container.appendChild(textCont)
         const imgvid = document.createElement('span')
         imgvid.id = 'imgvid'
         imgvid.innerHTML = 'Click to take a photo/Press and hold for video'
-        container.appendChild(imgvid)
+        textCont.appendChild(imgvid)
         const sliderHelp = document.createElement('span')
         sliderHelp.id = 'sliderHelp'
         sliderHelp.innerHTML = 'Move slider to adjust saturation of model'
-        container.appendChild(sliderHelp)
+        textCont.appendChild(sliderHelp)
 
         const slider = document.createElement('input')
         slider.className = 'slider'

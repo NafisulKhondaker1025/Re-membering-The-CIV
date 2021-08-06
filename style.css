@@ -254,6 +254,19 @@ img {
     display: block;
   }
 
+  #container #textcont {
+    position: absolute;
+    height: 50%;
+  }
+
+  #textcont span {
+    color: white;
+    position: absolute;
+    font-size: 4.0vmin;
+    font-weight: 1000;
+    display: none;
+  }
+
   #container span {
     color: white;
     position: absolute;
