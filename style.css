@@ -2,6 +2,10 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+#capbtn {
+  top: 5%;
+}
+
 #downloadButton {
   background-color: rgba(0, 0, 0, 0.5);
   font-size: 5vmin;
