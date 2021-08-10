@@ -22,7 +22,7 @@ body {
 #actionButton {
   background-color: rgba(0, 0, 0, 0.5) !important;
   font-weight: 1000;
-  /* display: none; */
+  display: none;
 }
 
 #requestingCameraIcon {
