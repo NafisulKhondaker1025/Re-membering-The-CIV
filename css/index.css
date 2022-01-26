@@ -46,7 +46,7 @@ body {
 
 #loadBackground {
   background-color: white !important;
-  background-image: url('/assets-civ/CIV_logo.png');
+  background-image: url('/assets/CIV_logo.png');
   background-position: 50% 30%;
   background-repeat: no-repeat;
   background-size: 95%;
