@@ -3,8 +3,16 @@ AFRAME.registerComponent('populate-sidebar', {
         const sidebar = document.getElementById('sidebar')
         const main = document.getElementById('main')
 
-        const download = document.getElementById('downloadButton')
-        download.innerHTML = 'Download'
+        const iOS15Check = () => {
+            const { os, osVersion, browser } = XR8.XrDevice.deviceEstimate();
+            const errorText = '';
+            if (os === 'iOS') {
+            }
+            else {
+                const download = document.getElementById('downloadButton');
+                download.innerHTML = 'Download';
+            }
+        }
 
         const closebtn = document.createElement('a')
         closebtn.innerHTML = "x"
@@ -15,19 +23,19 @@ AFRAME.registerComponent('populate-sidebar', {
         sidebar.appendChild(closebtn)
         const colorbtn = document.createElement('a')
         colorbtn.setAttribute('href', 'javascript:void(0)')
-        colorbtn.innerHTML = '<img id="colorimg" src="assets/color.png">'
+        colorbtn.innerHTML = '<img id="colorimg" src="/assets-civ/color.png">'
         colorbtn.onclick = this.openSlider
         colorbtn.className = 'colorbtn'
         sidebar.appendChild(colorbtn)
         const capturebtn = document.createElement('a')
         capturebtn.setAttribute('href', 'javascript:void(0)')
-        capturebtn.innerHTML = '<img id="cameraimg" src="assets/camera.png">'
+        capturebtn.innerHTML = '<img id="cameraimg" src="/assets-civ/camera.png">'
         capturebtn.onclick = this.openCapture
         capturebtn.className = 'capturebtn'
         sidebar.appendChild(capturebtn)
         const helpbtn = document.createElement('a')
         helpbtn.setAttribute('href', 'javascript:void(0)')
-        helpbtn.innerHTML = '<img id="cameraimg" src="assets/help.png">'
+        helpbtn.innerHTML = '<img id="helpimg" src="/assets-civ/help.png">'
         helpbtn.onclick = this.openHelp
         helpbtn.id = 'help'
         sidebar.appendChild(helpbtn)
@@ -43,7 +51,7 @@ AFRAME.registerComponent('populate-sidebar', {
         francbtn.onclick = this.showFranc
         francbtn.id = 'franc'
         sidebar.appendChild(francbtn)
-        
+
         const container = document.getElementById('container')
         const colorHelp = document.createElement('span')
         colorHelp.id = 'colHelp'
@@ -92,13 +100,13 @@ AFRAME.registerComponent('populate-sidebar', {
         main.appendChild(donebtn)
 
         function changeColor(value) {
-            function pad(num){
-                if (num.length<2) {
+            function pad(num) {
+                if (num.length < 2) {
                     return ('0' + num)
                 }
                 else {
                     return num
-                }    
+                }
             }
             let hexColor = parseInt(value, 10).toString(16)
             hexColor = pad(hexColor)
@@ -107,14 +115,14 @@ AFRAME.registerComponent('populate-sidebar', {
             if (!mesh) { return; }
             mesh.traverse((node) => {
                 if (node.isMesh) {
-                node.material.color = new THREE.Color(hexColor);
-                node.material.needsUpdate = true;
+                    node.material.color = new THREE.Color(hexColor);
+                    node.material.needsUpdate = true;
                 }
             });
         }
 
-        slider.addEventListener('change', function() {changeColor(slider.value)}, false)
-        slider.addEventListener('input', function() {changeColor(slider.value)}, false)
+        slider.addEventListener('change', function () { changeColor(slider.value) }, false)
+        slider.addEventListener('input', function () { changeColor(slider.value) }, false)
     },
 
     openSlider: function () {
@@ -143,42 +151,42 @@ AFRAME.registerComponent('populate-sidebar', {
         franc.style.top = "110%"
         colHelp.style.display = "none"
         camHelp.style.display = "none"
-     },
+    },
 
-     openHelp: function () {
+    openHelp: function () {
         eng.style.top = '65%'
         franc.style.top = '74%'
         colHelp.style.display = 'block'
         camHelp.style.display = 'block'
-     },
+    },
 
-     showEng: function () {
+    showEng: function () {
         colHelp.innerHTML = '❮❮❮❮ Click to adjust saturation'
         camHelp.innerHTML = '❮❮❮❮ Click to take a photo/video'
         imgvid.innerHTML = 'Click to take a photo, Press and hold for video'
         sliderHelp.innerHTML = 'Move slider to adjust saturation of model'
         done.innerHTML = 'Done'
         document.getElementById('downloadButton').innerHTML = 'Download'
-     },
+    },
 
-     showFranc: function () {
+    showFranc: function () {
         colHelp.innerHTML = '❮❮❮❮ Cliquez á régler la saturation'
         camHelp.innerHTML = '❮❮❮❮ Cliquez á prendre une photo/vidéo'
         imgvid.innerHTML = 'Cliquez á prendre une photo, appuyer et maintenir pour la vidéo'
         sliderHelp.innerHTML = 'Déplacer le curseur pour ajuster la saturation du modèle'
         done.innerHTML = 'Fini'
         document.getElementById('downloadButton').innerHTML = 'Télécharger'
-     },
- 
-     done: function () {
-         done.style.display = "none"
-         openb.style.display = "block"
-         slide.style.display = "none"
-         sliderHelp.style.display = "none"
-         imgvid.style.display = "none"
-         textcont.style.display = "none"
-         document.getElementById('recorder').style.display = "none"
-     }, 
+    },
+
+    done: function () {
+        done.style.display = "none"
+        openb.style.display = "block"
+        slide.style.display = "none"
+        sliderHelp.style.display = "none"
+        imgvid.style.display = "none"
+        textcont.style.display = "none"
+        document.getElementById('recorder').style.display = "none"
+    },
 
     closeBar: function () {
         sidebar.style.width = "0";
@@ -192,5 +200,5 @@ AFRAME.registerComponent('populate-sidebar', {
     openBar: function () {
         sidebar.style.width = "35%";
         main.style.display = "none"
-    } 
+    }
 })
