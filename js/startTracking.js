@@ -5,7 +5,7 @@ The respective position, scale and rotation of the augment is also defined here.
 AFRAME.registerComponent('start-tracking', {
     init: function() {
     const container = document.getElementById('container')                  // Call the container id on the screen
-    container.style.backgroundImage = "url('/assets/stabilization.gif')"     // Set the floating hand gif
+    container.style.backgroundImage = "url('./assets/stabilization.gif')"     // Set the floating hand gif
  
     setTimeout(() => {
       const CIV = document.createElement('a-entity')                        // Create the entity in the scene 
