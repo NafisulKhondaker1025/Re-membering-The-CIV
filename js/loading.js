@@ -1,4 +1,4 @@
-AFRAME.registerComponent('mods', {
+AFRAME.registerComponent('loading', {
 
     init: function () {
 

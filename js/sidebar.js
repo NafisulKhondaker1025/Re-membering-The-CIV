@@ -23,19 +23,19 @@ AFRAME.registerComponent('populate-sidebar', {
         sidebar.appendChild(closebtn)
         const colorbtn = document.createElement('a')
         colorbtn.setAttribute('href', 'javascript:void(0)')
-        colorbtn.innerHTML = '<img id="colorimg" src="/assets/color.png">'
+        colorbtn.innerHTML = '<img id="colorimg" src="assets/color.png">'
         colorbtn.onclick = this.openSlider
         colorbtn.className = 'colorbtn'
         sidebar.appendChild(colorbtn)
         const capturebtn = document.createElement('a')
         capturebtn.setAttribute('href', 'javascript:void(0)')
-        capturebtn.innerHTML = '<img id="cameraimg" src="/assets/camera.png">'
+        capturebtn.innerHTML = '<img id="cameraimg" src="assets/camera.png">'
         capturebtn.onclick = this.openCapture
         capturebtn.className = 'capturebtn'
         sidebar.appendChild(capturebtn)
         const helpbtn = document.createElement('a')
         helpbtn.setAttribute('href', 'javascript:void(0)')
-        helpbtn.innerHTML = '<img id="helpimg" src="/assets/help.png">'
+        helpbtn.innerHTML = '<img id="helpimg" src="assets/help.png">'
         helpbtn.onclick = this.openHelp
         helpbtn.id = 'help'
         sidebar.appendChild(helpbtn)
